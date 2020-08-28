@@ -1,39 +1,115 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# LIZ HICKEY LIFEDIGN
 
-Welcome USER_NAME,
+# Table of Contents:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
 
-## Gitpod Reminders
+# UX
+## User Stories
+* As a user, I would expect the website to be secure.
+* As a user, I would expect the website to be responsive on different devices.
+* As a user I would expect to be able to viwe the services offered.
+* As a user, I would expect the website to have a contact page and links to social media.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Goals
+* Website to be easy to use and visually appealing.
+* The Website will ensure safe storage of user details.
 
-`python3 -m http.server`
+# Strategy:
 
-A blue button should appear to click: *Make Public*,
+# Scope:
 
-Another blue button should appear to click: *Open Browser*.
+# Structure:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Navbar
 
-A blue button should appear to click: *Make Public*,
+# Surface:
+## Design Choice
 
-Another blue button should appear to click: *Open Browser*.
+**Typography-**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+**Colours-**
+Purple, green, pink and orange.
+**Images-**
 
-## Updates Since The Instructional Video
+## Features
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+## Future Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Skeleton:
+## Wireframes
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+# Information Architecture:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Technologies Used:
+## Languages
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Frameworks
+* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+* [Django](https://www.djangoproject.com/)
 
---------
 
-Happy coding!
+## Tools
+* [GitHub](https://github.com/)
+* [GitPod](https://www.gitpod.io/)
+* [Git](https://git-scm.com/about)
+* [W3C Markup Validation](https://validator.w3.org/)
+* [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/)
+* [Python Formatter](https://pythoniter.appspot.com/)
+* [Heroku](https://dashboard.heroku.com/apps)
+* [Stripe](https://stripe.com/gb)
+
+## Databases
+* [PostgreSQL](https://www.postgresql.org/) - Production database
+* [SQlite3](https://www.sqlite.org/index.html) - Development database
+
+# Testing:
+
+# Bugs:
+
+
+# Deployment:
+## **Run Locally:**
+
+## **Deploy to Heroku:**
+1. **Create** a **requirements.txt** file using the command
+```
+pip3 freeze > requirements.txt
+```
+
+2. **Create** a **Procfile** . Procfile must start with a capital 'P'
+```
+echo web: python app.py > Procfile
+```
+
+3. Push these to your Git repository.
+
+4. Create a new app on Heroku, assign a unique name and set your region (I used Europe)
+
+5. To start the web process, put the following command into the terminal to scale dynos:
+```
+heroku ps:scale web=1
+```
+
+6. From the Heroku dashboard, **click Deploy -> Deployment method -> GitHub**
+
+7. Connect to your Github repository by adding your **repo name** and clicking the search button.
+
+8. In the heroku dashboard for the application, click on **Settings -> Reveal Config Vars** and set the following config vars:
+    * DATABASE_URL: *your_database_url*
+    * SECRET_KEY: *your secret key* 
+    *
+
+9. **Deploy -> Manual Deploy** select the master branch and click **deploy branch** button.
+
+10. Click **Open App** to view the app.
+
+# Credits
+
+# Disclaimer
+**This websit is for educational purposes only.**
+
