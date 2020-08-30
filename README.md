@@ -110,6 +110,10 @@ heroku ps:scale web=1
 
 # Credits
 To created the allauth social media login in i followed [Codev Youtube video](https://www.youtube.com/watch?v=-TUEM2NCuVE)
+
+
+
+
 # Disclaimer
 **This websit is for educational purposes only.**
 
