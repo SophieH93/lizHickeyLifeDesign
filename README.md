@@ -47,8 +47,13 @@ Purple, green, pink and orange.
 | ------------- |:-------------:| -----:|
 | Full Name       | CharField | max_length=20, blank=False |
 | Number    | CharField      |  max_length=20, null=True, blank=True  |
-| password | CharField     |    $OneToOneField 'User'|
-| body     | CharField | max_length=50, null=True, blank=True | 
+| Address Line1 |  CharField  |   max_length=60, null=True, blank=True |
+| Address Line |  CharField   |   max_length=60, null=True, blank=True  |
+| Town/City |   CharField   |  max_length=50, null=True, blank=True   |
+| County |  CharField  |  max_length=50, null=True, blank=True   |
+| Postcode |  CharField   |  max_length=20, blank=True   |
+| Country |  CountryField    |  max_length=30, blank=True   |
+
 
 
 
