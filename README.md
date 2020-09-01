@@ -39,6 +39,32 @@ Purple, green, pink and orange.
 ## Wireframes
 
 # Information Architecture:
+**Profile** 
+| Name            | Field Type  |  Validaion |  
+| ------------- |:-------------:| -----:| -----:|
+| User     |on_delete=mod | $OneToOneField 'User' | 
+| Full Name     | CharField      |  	max_length=20, blank=False  |
+| Number    | CharField      |  max_length=20, null=True, blank=True  |
+| Address Line1 |  CharField  |   max_length=60, null=True, blank=True |
+| Address Line |  CharField   |   max_length=60, null=True, blank=True  |
+| Town/City |   CharField   |  max_length=50, null=True, blank=True   |
+| County |  CharField  |  max_length=50, null=True, blank=True   |
+| Postcode |  CharField   |  max_length=20, blank=True   |
+| Country |  CountryField    |  max_length=30, blank=True   |
+
+**User login/register**
+| Name            | Field Type  |  Validaion |  
+| ------------- |:-------------:| -----:| -----:|
+| email     | EmailField | $OneToOneField 'User' | 
+| password     | CharField | $OneToOneField 'User' | 
+
+**Contact**
+| Name            | Field Type  |  Validaion |  
+| ------------- |:-------------:| -----:| -----:|
+| Full Name     | CharField      |  	max_length=20, blank=False  |
+| email     | EmailField | $OneToOneField 'User' | 
+| password     | CharField | $OneToOneField 'User' | 
+| body     | CharField | max_length=50, null=True, blank=True | 
 
 # Technologies Used:
 ## Languages
