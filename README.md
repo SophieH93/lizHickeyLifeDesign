@@ -70,7 +70,7 @@ Purple, green, pink and orange.
 
 
 
-| Tables        | Are           | Cool  |
+| Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
