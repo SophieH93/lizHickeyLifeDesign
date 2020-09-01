@@ -62,6 +62,7 @@ Purple, green, pink and orange.
 * [Python Formatter](https://pythoniter.appspot.com/)
 * [Heroku](https://dashboard.heroku.com/apps)
 * [Stripe](https://stripe.com/gb)
+* [Django Secret Key Generator ](https://miniwebtool.com/django-secret-key-generator/)
 
 ## Databases
 * [PostgreSQL](https://www.postgresql.org/) - Production database
