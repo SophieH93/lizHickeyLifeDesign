@@ -41,7 +41,12 @@ Purple, green, pink and orange.
 # Information Architecture:
 **Profile**     
 
-
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+| Full Name       | CharField | max_length=20, blank=False |
+| Number    | CharField      |  max_length=20, null=True, blank=True  |
+| password | CharField     |    $OneToOneField 'User'|
+| body     | CharField | max_length=50, null=True, blank=True | 
 
 | Name            | Field Type  |  Validaion |  
 | ------------- |:-------------:| -----:| -----:|
