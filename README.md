@@ -72,7 +72,7 @@ Purple, green, pink and orange.
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+| Full Name       | CharField | max_length=20, blank=False |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
