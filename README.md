@@ -39,7 +39,7 @@ Purple, green, pink and orange.
 ## Wireframes
 
 # Information Architecture:
-**Profile** 
+**Profile**     
 | Name            | Field Type  |  Validaion |  
 | ------------- |:-------------:| -----:| -----:|
 | User     |on_delete=mod | $OneToOneField 'User' | 
@@ -65,6 +65,16 @@ Purple, green, pink and orange.
 | email     | EmailField | $OneToOneField 'User' | 
 | password     | CharField | $OneToOneField 'User' | 
 | body     | CharField | max_length=50, null=True, blank=True | 
+
+
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 
 # Technologies Used:
 ## Languages
