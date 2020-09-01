@@ -58,7 +58,8 @@ Purple, green, pink and orange.
 | email     | EmailField | $OneToOneField 'User' | 
 | password     | CharField | $OneToOneField 'User' | 
 
-**Contact**
+**Contact**   
+
 | Name            | Field Type  |  Validaion |  
 | ------------- |:-------------:| -----:| -----:|
 | Full Name     | CharField      |  	max_length=20, blank=False  |
