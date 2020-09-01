@@ -60,12 +60,7 @@ Purple, green, pink and orange.
 
 **Contact**   
 
-| Name            | Field Type  |  Validaion |  
-| ------------- |:-------------:| -----:| -----:|
-| Full Name     | CharField      |  	max_length=20, blank=False  |
-| email     | EmailField | $OneToOneField 'User' | 
-| password     | CharField | $OneToOneField 'User' | 
-| body     | CharField | max_length=50, null=True, blank=True | 
+
 
 
 
@@ -73,8 +68,9 @@ Purple, green, pink and orange.
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
 | Full Name       | CharField | max_length=20, blank=False |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| email      | EmailField      |   OneToOneField 'User' |
+| password | CharField     |    $OneToOneField 'User'|
+| body     | CharField | max_length=50, null=True, blank=True | 
 
 
 # Technologies Used:
