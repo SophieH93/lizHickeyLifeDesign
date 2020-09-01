@@ -53,15 +53,14 @@ Purple, green, pink and orange.
 | Country |  CountryField    |  max_length=30, blank=True   |
 
 **User login/register**
-| Name            | Field Type  |  Validaion |  
-| ------------- |:-------------:| -----:| -----:|
-| email     | EmailField | $OneToOneField 'User' | 
-| password     | CharField | $OneToOneField 'User' | 
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+| email      | EmailField      |   OneToOneField 'User' |
+| password | CharField     |    $OneToOneField 'User'|
 
 **Contact**   
-
-
-
 
 
 
