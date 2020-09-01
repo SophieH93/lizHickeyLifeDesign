@@ -40,6 +40,9 @@ Purple, green, pink and orange.
 
 # Information Architecture:
 **Profile**     
+
+
+
 | Name            | Field Type  |  Validaion |  
 | ------------- |:-------------:| -----:| -----:|
 | User     |on_delete=mod | $OneToOneField 'User' | 
