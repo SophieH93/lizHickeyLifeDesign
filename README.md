@@ -7,12 +7,25 @@
 ## User Stories
 * As a user, I would expect the website to be secure.
 * As a user, I would expect the website to be responsive on different devices.
-* As a user I would expect to be able to viwe the services offered.
+* As a user I would expect to be able to view the courses offered.
+* As a user I would expect there to be information on the business.
+* As a user I would expect there to be information on the business owner.
 * As a user, I would expect the website to have a contact page and links to social media.
+* As a user, I would expect to be able make online payments.
+* As a user, I would expect to receive details about my order.
+* As a user, I would expect to see the location of the company on a map.
+* As a user, I would expect there to be a booking system with a calender to pick an available day and time for a consultation.
+* As a user, I would expect to be able to view and modify my order in the cart before completing it.
+* As a user, I would expect to be able to view a total price of my purchases.
+* As a user, I want to create my own account, so that I can save, view and edit my profile details and view my order history.
+* As a user, I would expect to view reviews other customers.
+
+
 
 ## User Goals
 * Website to be easy to use and visually appealing.
 * The Website will ensure safe storage of user details.
+* Purchase courses/services shown on the website in a safe and secure way.
 
 # Strategy:
 
