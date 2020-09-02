@@ -1,5 +1,7 @@
 # LIZ HICKEY LIFEDIGN
 
+LIFEDESIGN was created by Liz which is a process that helps people to overcome different life challenges. It will give you tools to be able to move forward from all kind of experiences and to find creative and innovative solutions to your problems.
+
 # Table of Contents:
 
 
@@ -28,6 +30,9 @@
 * Purchase courses/services shown on the website in a safe and secure way.
 
 # Strategy:
+
+The value of this website is that 
+
 
 # Scope:
 
@@ -119,6 +124,37 @@ Purple, green, pink and orange.
 * [SQlite3](https://www.sqlite.org/index.html) - Development database
 
 # Testing:
+
+## Navbar/Footer:
+* **Plan-**  I will need to ensure all the links work properly so when the user clicks on one they are brought to the correct page. To ensure the navbar will collapse and the side bar shows up when the hamburger menu is clicked.
+
+* **Implementation-** 
+
+* **Testing-** 
+
+* **Result-** 
+
+
+
+## Authentication Pages:
+* **Plan-**  I will need to implement a way that a user will be able to create an account and that their information is stored in a database.   
+This invloves checking that the users passwords match when they create a password and confirm the password and their details are correct when they go to login.
+
+
+* **Implementation-** I will use Django allauth package to create Authentication for Register and Login Pages.   
+I will create severl sample accounts to test that validation works by entering two different passwords in registration form,   
+creating an account and try to login with correct and incorrect details.
+If the customer wishes to log out of their account I will need to ensure the logout link works
+
+* **Testing-** 
+
+* **Result-** 
+
+
+
+
+
+
 
 # Bugs:
 
