@@ -150,7 +150,40 @@ If the customer wishes to log out of their account I will need to ensure the log
 
 * **Result-** 
 
+## Landing Page:
+* **Plan-** I will need to ensure all the buttons click to the right page.   
+Verify that the expected text, icons and images are displayed
 
+
+* **Implementation-** 
+
+* **Testing-** 
+
+* **Result-** 
+
+
+## Courses Page:
+* **Plan-** I will need to ensure that if a user clicks on the "View Details" button of a course that they are brought to the correct details of that course.   
+Adding a course to the cart buttons works, showing the course in the shopping cart.
+
+
+* **Implementation-** 
+
+* **Testing-** 
+
+* **Result-** 
+
+## Shopping Cart Page:
+* **Plan-** I will need to ensure that all the revelevent buttons work properly e.g continue shopping or proceed to payment'.    
+That if a user wishes to proceed to the checkout that they are brought to the Registration page to create an account first.   
+The user is able to remove an item.
+
+
+* **Implementation-** 
+
+* **Testing-** 
+
+* **Result-** 
 
 
 
