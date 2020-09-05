@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'courses',
     'about_liz',
     'contact',
+    'shopping_cart',
 
     # providers
     'allauth.socialaccount.providers.facebook',
