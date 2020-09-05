@@ -9,18 +9,18 @@
         <h3>We welcome enquiries please feel free to contact us by phone, email or on social media.</h3>  
     </div>
 </div>
-<div class="col-12 col-lg-6 mb-5 shadow p-4 rounded-lg">
-    <p>If you have any questions or special queries,
-     fill out the form and we will get back to you within 24 hours.</p>
-    <form method="POST" action="{% url 'contact' %}">
-        {% csrf_token %}
-        {{ contact_form|crispy }}
-        <div class="text-center mb-2 mt-4">
-            <button type="submit" id="contact-form-btn" 
-                    class="btn button-green  uppercase w-100">
-                <i class="fas fa-paper-plane mr-2"></i> Send
-            </button>
+
+<!--Contact form-->
+        <div class="col-12 col-md-6 form-bg p-3">
+            <form action="{% url 'contact' %}" method="POST" class="form-group">
+                {% csrf_token %}
+                {{ contact_form|crispy }}
+                <button id="submit-button" class="btn btn-lg">
+                    <span class="text-uppercase">Send message</span>
+                    <span class="icon">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                </button>
+            </form>
         </div>
-    </form>
-</div>
-{% endblock %}
+        {% endblock %}
