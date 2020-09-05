@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'contact',
     'shopping_cart',
 
+    'crispy_forms',
+
+    
     # providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
@@ -70,6 +73,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'liz_hickey_lifedesign.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -85,6 +90,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
