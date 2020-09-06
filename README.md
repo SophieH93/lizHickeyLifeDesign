@@ -3,7 +3,10 @@
 LIFEDESIGN was created by Liz which is a process that helps people to overcome different life challenges. It will give you tools to be able to move forward from all kind of experiences and to find creative and innovative solutions to your problems.
 
 # Table of Contents:
-
+* [UX](https://github.com/SophieH93/lizHickeyLifeDesign#ux)    
+    * Project Goals
+    * User Stories
+    * User Goals
 
 # UX
 ## User Stories
