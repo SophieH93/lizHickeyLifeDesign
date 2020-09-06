@@ -40,6 +40,9 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
 
 # UX
 
+## Project Goals
+
+
 ## User Stories
 * As a user, I would expect the website to be secure.
 * As a user, I would expect the website to be responsive on different devices.
@@ -65,7 +68,8 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
 
 # Strategy:
 
-The value of this website is that 
+The goal of this website is to provide users with a background to the Service offered by Liz with a user-friendly design.
+The users have the option to book a session with Liz directly, purchase a Course available and contact Liz via a contact form or through Liz's Social Media Sites.
 
 
 # Scope:
