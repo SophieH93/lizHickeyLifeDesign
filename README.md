@@ -7,8 +7,39 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
     * Project Goals
     * User Stories
     * User Goals
+* [Strategy](https://github.com/SophieH93/lizHickeyLifeDesign#strategy)
+* [Scope](https://github.com/SophieH93/lizHickeyLifeDesign#scope)
+* [Structure](https://github.com/SophieH93/lizHickeyLifeDesign#structure)
+* [Surface](https://github.com/SophieH93/lizHickeyLifeDesign#surface)
+    * Design Choices
+        * Typography
+        * Colours
+        * Styling
+        * Images
+    * [Feautres](https://github.com/SophieH93/lizHickeyLifeDesign#features)
+* [Skeleton](https://github.com/SophieH93/lizHickeyLifeDesign#skeleton)
+    * Wireframes    
+        * Website Layout
+        * Flowchart
+* [Information Architecture](https://github.com/SophieH93/lizHickeyLifeDesign#information-architecture)
+    * Data Modelling
+* [Technologies Used](https://github.com/SophieH93/lizHickeyLifeDesign#technologies-used)
+    * [Languages](https://github.com/SophieH93/lizHickeyLifeDesign#languages)
+    * [Frameworks](https://github.com/SophieH93/lizHickeyLifeDesign#frameworks)
+    * [Tools](https://github.com/SophieH93/lizHickeyLifeDesign#tools)
+    * [Databases](https://github.com/SophieH93/lizHickeyLifeDesign#databases)
+* [Testing](https://github.com/SophieH93/lizHickeyLifeDesign#testing)
+* [Bugs](https://github.com/SophieH93/lizHickeyLifeDesign#bugs)
+* [Deployment](https://github.com/SophieH93/lizHickeyLifeDesign#deployment)
+    *  [Locally run the project](https://github.com/SophieH93/lizHickeyLifeDesign#run-locally)
+    * [Deploying to Heroku](https://github.com/SophieH93/lizHickeyLifeDesign#deploy-to-heroku)
+* [Credits](https://github.com/SophieH93/lizHickeyLifeDesign#credits)
+* [Disclaimer](https://github.com/SophieH93/lizHickeyLifeDesign#disclaimer)
+
+
 
 # UX
+
 ## User Stories
 * As a user, I would expect the website to be secure.
 * As a user, I would expect the website to be responsive on different devices.
@@ -60,7 +91,8 @@ Purple, green, pink and orange.
 ## Wireframes
 
 # Information Architecture:
-**Profile**     
+## Data Modelling
+### **Profile**     
 
 
 
@@ -78,7 +110,7 @@ Purple, green, pink and orange.
 
 
 
-**User login/register**
+### **User login/register**
 
 
 | Name        | Field Type           | Validaion  |
@@ -86,7 +118,7 @@ Purple, green, pink and orange.
 | email      | EmailField      |   OneToOneField 'User' |
 | password | CharField     |    $OneToOneField 'User'|
 
-**Contact**   
+### **Contact**   
 
 
 
