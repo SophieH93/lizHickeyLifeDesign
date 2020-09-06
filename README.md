@@ -134,6 +134,17 @@ Purple, green, pink and orange.
 | body     | CharField | max_length=50, null=True, blank=True | 
 
 
+### **testimonials**   
+
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+| Related User      | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='reviews' |
+| review content | CharField     |   null=False, blank=False, default='' |
+
+
+
 # Technologies Used:
 ## Languages
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
