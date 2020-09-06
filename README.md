@@ -133,8 +133,20 @@ Purple, green, pink and orange.
 | password | CharField     |    $OneToOneField 'User'|
 | body     | CharField | max_length=50, null=True, blank=True | 
 
+### **Courses**   
 
-### **testimonials**   
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+|  name   | CharField | max_length=254|
+| description      | TextField      |   max_length=800 |
+| image | ImageField     |   upload_to="static/images"|
+| price     | DecimalField | max_digits=6, decimal_places=2 | 
+
+
+
+### **Testimonials**   
 
 
 
