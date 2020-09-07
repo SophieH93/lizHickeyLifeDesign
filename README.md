@@ -22,7 +22,8 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
         * Website Layout
         * Flowchart
 * [Information Architecture](https://github.com/SophieH93/lizHickeyLifeDesign#information-architecture)
-    * Data Modelling
+    * [Database Choice](https://github.com/SophieH93/lizHickeyLifeDesign#database-choice)
+    * [Data Models](https://github.com/SophieH93/lizHickeyLifeDesign#data-models)
 * [Technologies Used](https://github.com/SophieH93/lizHickeyLifeDesign#technologies-used)
     * [Languages](https://github.com/SophieH93/lizHickeyLifeDesign#languages)
     * [Frameworks](https://github.com/SophieH93/lizHickeyLifeDesign#frameworks)
