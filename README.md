@@ -95,7 +95,14 @@ Purple, green, pink and orange.
 ## Wireframes
 
 # Information Architecture:
-## Data Modelling
+## Database choice
+During the development phase I worked with **[sqlite3](https://docs.djangoproject.com/en/3.1/ref/databases/#sqlite-notes)** database which is installed with Django.
+For deployment(production), a **[PostgreSQL](https://docs.djangoproject.com/en/3.1/ref/databases/#postgresql-notes)** database is provided by Heroku as an add-on.
+
+## Data Models
+The **User Model** usied in this project is provided by Django as a part of defaults **django.contrib.auth.models**.
+Click [here](https://docs.djangoproject.com/en/3.0/ref/contrib/auth/) to read more information about Django’s authentication system.
+
 ### **Profile**     
 
 
