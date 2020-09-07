@@ -102,8 +102,9 @@ Purple, green, pink and orange.
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
+|  auth_user      | ForeignKey | max_length=20, blank=False |
 | Full Name       | CharField | max_length=20, blank=False |
-| Number    | CharField      |  max_length=20, null=True, blank=True  |
+| Phone Number    | CharField      |  max_length=20, null=True, blank=True  |
 | Address Line1 |  CharField  |   max_length=60, null=True, blank=True |
 | Address Line |  CharField   |   max_length=60, null=True, blank=True  |
 | Town/City |   CharField   |  max_length=50, null=True, blank=True   |
@@ -114,26 +115,19 @@ Purple, green, pink and orange.
 
 
 
-### **User login/register**
+### **User login/register/contact**
 
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
 | email      | EmailField      |   OneToOneField 'User' |
 | password | CharField     |    $OneToOneField 'User'|
-
-### **Contact**   
-
-
-
-| Name        | Field Type           | Validaion  |
-| ------------- |:-------------:| -----:|
 | Full Name       | CharField | max_length=20, blank=False |
 | email      | EmailField      |   OneToOneField 'User' |
 | password | CharField     |    $OneToOneField 'User'|
 | body     | CharField | max_length=50, null=True, blank=True | 
 
-### **Courses**   
+### **Course**   
 
 
 
@@ -146,14 +140,47 @@ Purple, green, pink and orange.
 
 
 
-### **Testimonials**   
+### **Testimonial**   
 
 
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
 | Related User      | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='reviews' |
-| review content | CharField     |   null=False, blank=False, default='' |
+| review content | TextField     |   null=False, blank=False, default='' |
+
+
+### **Order**   
+The Order model within the checkout app holds the following data for the orders.
+
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+|  Related User    | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='orders' |
+|  Full Name   | CharField | max_length=254|
+| Phone Number    | CharField      |  max_length=20, null=True, blank=True  |
+| email      | EmailField      |   OneToOneField 'User' |
+| Address Line1 |  CharField  |   max_length=60, null=True, blank=True |
+| Address Line |  CharField   |   max_length=60, null=True, blank=True  |
+| Town/City |   CharField   |  max_length=50, null=True, blank=True   |
+| Postcode |  CharField   |  max_length=20, blank=True   |
+| Country |  CountryField    |  max_length=30, blank=True   |
+| Date |  DateTimeField    |  auto_now_add=True |
+| Total Price |  DecimalField    | max_digits=10, decimal_places=2 |
+
+
+### **Order Item Detail**   
+A row of Order Item Detail is created for each item existing in the shopping bag which then gets saved with the order.
+
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+|  Order   | ForeignKey |Order, null=False|
+|  Product  | ForeignKey | Product, null=False|
+| Purchase Date |  DateTimeField    |  auto_now_add=True |
+| Total Price |  DecimalField    | max_digits=10, decimal_places=2 |
 
 
 
