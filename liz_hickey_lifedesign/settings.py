@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'courses',
     'about_liz',
     'contact',
+    'book',
     'shopping_cart',
 
     'crispy_forms',
@@ -173,3 +174,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+GOOGLE_MAP_API_KEY = os.environ.get('GOOGLE_MAP_KEY')
