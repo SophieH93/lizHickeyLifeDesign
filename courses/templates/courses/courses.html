@@ -4,7 +4,14 @@
 {% block content %}
 
 <h1>Courses</h1>
+  <div class="col-12"> 
+    <p>Below you can feel the variaty of countries of my clients</p>          
+            <div id="map"></div>
+        </div>  
 
-
+   <script src="{% static 'js/map.js' %}"></script> 
+   <!--Google map API settings-->
+  <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo-zFHb6Ci4aysJLJMWvZZ06esIPmoXec&callback=initMap"></script>
 
 {% endblock %}
