@@ -288,7 +288,8 @@ The user is able to remove an item.
 
 
 # Bugs:
-
+* **The Bug:** I encountered an issue within the Blog app, where the **Blog url** was not linking to the page when I added the url to the navbar. I was getting a **NoReverseMatch** error message. I followed a Youble video to build the Blog.  
+**The Fix:** With the help of the Tutor's and Students we discovered that I was to remove **app_name = 'blog'** in the blog url file, the **blog** from the models file so it just returns reverse for post_single and **namespace** from the main url file.
 
 # Deployment:
 ## **Run Locally:**
