@@ -9,10 +9,10 @@
         <div class="col-md-8">
 
             {% for post in posts %}   
-
-            <a href="{{post.get_absolute_url}}">Link</a>
-            <div class="col-12"><h1>{{post.title}}</h1></div>
-            <div class="col-12"><p>{{post.content}}</p></div>                                     
+            <div class="col-12"><h1>
+                <a href="{{post.get_absolute_url}}"> {{post.title}} </a></h1>           
+           </div>
+            <div class="col-12"><p>{{post.excerpt}}</p></div>                                     
 
             {% endfor %}
         </div>        
