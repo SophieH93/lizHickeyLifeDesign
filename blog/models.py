@@ -29,7 +29,7 @@ class Post(models.Model):
         """
         Returns the slug information
         """
-        return reverse('blog:post_single', args=[self.slug])
+        return reverse('post_single', args=[self.slug])
 
     class Meta:
         ordering = ('-publish',)
