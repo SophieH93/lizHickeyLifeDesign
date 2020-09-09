@@ -2,5 +2,14 @@ from django.contrib import admin
 from .models import Course
 
 # Register your models here.
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'sku',
+        'name',
+        'price',
+        'image',
+    )
 
-admin.site.register(Course)
+    ordering = ('sku',)
+
+admin.site.register(Course, ProductAdmin)
