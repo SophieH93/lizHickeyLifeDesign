@@ -1,0 +1,14 @@
+[
+  {
+    "pk": 1,
+    "model": "courses.course",
+    "fields": {
+      "sku": "dw4007301",
+      "name": "course 1",
+      "description": "description of course will go here.",
+      "price": 11.99,
+      "image": "https://i.ibb.co/TmSDXVb/oolong-rose.jpg"
+    }
+  }
+
+]
