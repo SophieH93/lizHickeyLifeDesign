@@ -58,15 +58,15 @@
                 </li>     
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'shopping_cart' %}"><i class="fas fa-shopping-basket"></i>
-                        <p class="my-0">
-                            {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
-                            {% else %}
-                                $0.00
+                         <p class="my-0">
+                          {% if course_total > 0 %}
+                            <label >{{ course_total }}</label>
                             {% endif %}
-                        </p>
+                         </p>
                     </a>
                 </li>
+                        
+                  
             </ul>             
         </div>
     </div>
