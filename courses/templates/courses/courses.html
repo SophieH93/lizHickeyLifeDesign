@@ -14,11 +14,11 @@
                 <div class="col-md-6">
                     <div class="card">
                         {% if courses.image %}
-                        <a href="/">
+                        <a href="{% url 'course_detail' course.id %}">
                             <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
                         </a>
                         {% else %}
-                        <a href="/">
+                        <a href="{% url 'course_detail' course.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
                         </a>
                         {% endif %}
@@ -26,7 +26,7 @@
                             <p>{{ course.name}}</p>
                         </div>
                         <div class="card-footer">
-                            <p>{{ course.price}}</p>
+                            <p>€{{ course.price}}</p>
 
                         </div>
 
