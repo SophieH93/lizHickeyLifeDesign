@@ -9,5 +9,3 @@ urlpatterns = [
     path('<slug:post>/', views.post_single, name='post_single'),
 ]
 
-
-
