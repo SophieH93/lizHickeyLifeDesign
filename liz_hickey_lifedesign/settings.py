@@ -54,13 +54,12 @@ INSTALLED_APPS = [
     'book',
     'shopping_cart',
     'blog',
-
     'crispy_forms',
 
     
-    # providers
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
+#     # providers
+#     'allauth.socialaccount.providers.facebook',
+#     'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -175,5 +174,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 GOOGLE_MAP_API_KEY = os.environ.get('GOOGLE_MAP_KEY')
