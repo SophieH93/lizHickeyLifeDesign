@@ -7,14 +7,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="image-container my-5">
-                {% if product.image %}
+                {% if course.image %}
                     <a href="{{ course.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                        <img class="card-img-top img-fluid" src="{{ course.image.url}}" alt="{{ course.name }}">
                     </a>
                     {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
-                    </a>
+                    <!-- <a href="">
+                        <img class="card-img-top img-fluid" src="/static/images/noimage.png" alt="{{ course.name }}">
+                    </a> -->
                 {% endif %}
             </div>
         </div>

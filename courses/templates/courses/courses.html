@@ -13,7 +13,7 @@
             {% for course in courses %}
                 <div class="col-md-6">
                     <div class="card">
-                        {% if courses.image %}
+                        {% if course.image %}
                         <a href="{% url 'course_detail' course.id %}">
                             <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
                         </a>
