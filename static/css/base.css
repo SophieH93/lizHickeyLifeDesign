@@ -1,8 +1,51 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+
+
+/* body {
     margin-top: 5rem;
+} */
+
+header {
+    padding-top: 3rem;
+}
+
+#logo {
+    height: 28vh;
+    width: auto;
+    margin-left: 1rem;
+    
+}
+
+.brand_name {
+    font-family: 'Baskervville', serif;
+    color: black;
+    text-align: center;
+}
+
+.brand_words {
+    text-align: right;
+    
+}
+
+.title {
+    text-align: center;
+    background-color: gray;
 }
 
 #map{
 min-height: 400px;
 height: 30vh;
+}
+
+/* .nav{
+   text-align: center;
+} */
+
+/* .banner {
+     margin-top: 15rem;
+} */
+
+.nav-link {
+    color: #180e0e!important;    
+    font-size: 1.3rem;
 }
