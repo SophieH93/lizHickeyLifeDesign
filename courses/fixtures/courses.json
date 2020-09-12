@@ -3,11 +3,12 @@
     "pk": 1,
     "model": "courses.course",
     "fields": {
-      "sku": "dw4007301",
-      "name": "course 1",
-      "description": "description of course will go here.",
-      "price": 11.99,
-      "image": "https://i.ibb.co/TmSDXVb/oolong-rose.jpg"
+        "sku": "dw4007301",
+        "name": "course 1",
+        "description": "description of course will go here.",
+        "price": 11.99,
+        "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
+        "image": "vision_board.jpg" 
     }
   }
 
