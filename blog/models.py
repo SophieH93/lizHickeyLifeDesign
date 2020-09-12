@@ -21,16 +21,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     content = models.TextField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    #image = models.ImageField(upload_to='static/images')
     status = models.CharField(max_length=10,  choices=options, default='draft')
     objects = models.Manager()
     newmanager = NewManager()
-
-    # def get_absolute_url(self):
-    #     """
-    #     Returns the slug information
-    #     """
-    #     return reverse('post_single', args=[self.slug])
 
     class Meta:
         ordering = ('-publish',)
