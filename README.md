@@ -190,7 +190,16 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 | Purchase Date |  DateTimeField    |  auto_now_add=True |
 | Total Price |  DecimalField    | max_digits=10, decimal_places=2 |
 
+### **Reviews**   
 
+
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+|  Related User   | ForeignKey | serProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='reviews'|
+|  Related Product  | ForeignKey | Product, blank=False, Null=False, related_name='reviews' |
+| Review content |  TextField    |  null=False, blank=False, default=''|
 
 # Technologies Used:
 ## Languages
