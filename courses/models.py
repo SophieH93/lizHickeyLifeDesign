@@ -27,4 +27,4 @@ class Review(models.Model):
     rate = models.IntegerField(default=1)
 
     def __str__(self):
-        return self.subject
+        return self.review
