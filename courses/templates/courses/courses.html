@@ -5,49 +5,45 @@
     <div class="container">
         <div class="row">
             <div class="col">    
-                <h1>Courses</h1>        
-                                  
+                <h1> My Courses</h1>                       
             </div>        
         </div>
         <div class="row">
             {% for course in courses %}
-                <div class="col-md-6">
-                    <div class="card">
+                <div class="col-md-4">
+                    <div class="card text-center" style="width: 16rem;">
                         {% if course.image %}
                         <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                            <img class="blog-image img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'course_detail' course.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body">
-                            <p>{{ course.name}}</p>
+                        <div class="card-header">
+                            <p>{{ course.name}}</p>                            
                         </div>
-                        <div class="card-footer">
-                            <p>€{{ course.price}}</p>
-
+                        <div class="card-text">
+                            <p>{{ course.excerpt}}</p>
                         </div>
-
-
+                        <div class="card-text">
+                            <p>€{{ course.price}}
+                            <a href="#" class="card-link">View </a></p>
+                        </div>
                     </div>
                 </div>
-
-            {% endfor %}
+                {% endfor %}
         </div>
-
+    
+    <div class="row">
+        <div class="col-12"> 
+            <h1>My wonderful clients are from all over the world</h1>          
+                <div id="map"></div>
+        </div>  
     </div>
 
-
-
-  <div class="col-12"> 
-    <p>Below you can feel the variaty of countries of my clients</p>          
-        <div id="map"></div>
-    </div>  
-
-
-
+</div>
 <script src="{% static 'js/map.js' %}"></script> 
 <!--Google map API settings-->
 <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
