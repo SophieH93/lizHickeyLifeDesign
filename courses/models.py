@@ -1,6 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+
 
 class Course(models.Model):
     """
@@ -14,6 +15,16 @@ class Course(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
-
     def __str__(self):
         return self.name
+
+
+class Review(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+   # subject = models.CharField(max_length=60, null=False, blank=False)
+    review = models.TextField(null=False, blank=False)
+    rate = models.IntegerField(default=1)
+
+    def __str__(self):
+        return self.subject
