@@ -12,7 +12,7 @@ def cart_contents(request):
     for item_id, quantity in cart.items():
         course = get_object_or_404(Course, pk=item_id)
         total += quantity * course.price
-        course_total += quantity
+        course_total += quantity * course.price
         cart_items.append({
             'item_id': item_id,
             'quantity': quantity,
@@ -20,9 +20,9 @@ def cart_contents(request):
         })
 
     context = {
-        'cart_items' : cart_items,
+        'cart_items': cart_items,
         'total': total,
-        'course_total' : course_total,
+        'course_total': course_total,
     }
 
     return context
