@@ -6,10 +6,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <div class="image-container my-5">
+            <div class="image-container">
                 {% if course.image %}
                     <a href="{{ course.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ course.image.url}}" alt="{{ course.name }}">
+                        <img class="blog-image img-fluid" src="{{ course.image.url}}" alt="{{ course.name }}">
                     </a>
                     {% else %}
                     <!-- <a href="">
