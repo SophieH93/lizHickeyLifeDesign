@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.conf import settings
 from .models import Course
+from .forms import ReviewForm
 
-# Create your views here.
 
 
 def courses(request):
@@ -24,9 +24,12 @@ def course_detail(request, course_id):
     A view to display an individula course information
     """
     course = get_object_or_404(Course, pk=course_id)
+    review_form = ReviewForm()
 
     context = {
         'course': course,
+        'review_form': review_form,
+
     }
 
     return render(request, 'courses/course_detail.html', context)
