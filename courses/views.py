@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.conf import settings
-from .models import Course
+from .models import Course, Review
 from .forms import ReviewForm
 
 
@@ -21,16 +21,31 @@ def courses(request):
 
 def course_detail(request, course_id):
     """
-    A view to display an individula course information
+    A view to display an individula course information & Review form
     """
     course = get_object_or_404(Course, pk=course_id)
     review_form = ReviewForm()
+    reviews = Review.objects.filter(course_id=course_id)
 
     context = {
         'course': course,
         'review_form': review_form,
+        'reviews': reviews,
 
     }
 
     return render(request, 'courses/course_detail.html', context)
+
+
+def add_review(request, product_id):
+
+    if request.method == 'POST': 
+      review_form = ReviewForm(request.POST)
+      if review_form.is_valid():
+        review_form.save()
+        messages.success(request, "Your review has ben sent. Thank you for your interest.")
+        print('shit')
+        return redirect(reverse('course_detail'))
+
+    return redirect(reverse('course_detail'))
 
