@@ -12,8 +12,14 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class ReviewAdmin(admin.ModelAdmin):
-    readonly_fields = ('course', 'review')
+    list_display = (
+        'course',
+        'user',
+        'review',
+        'rate',
+    )
 
 
 admin.site.register(Course, ProductAdmin)
