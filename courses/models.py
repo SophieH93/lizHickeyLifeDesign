@@ -2,15 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-
 class Course(models.Model):
     """
     Model for courses
     """
- #   category = models.ForeignKey('Course', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    excerpt = models.TextField(max_length=30, default='some string')
     name = models.CharField(max_length=254)
+    excerpt = models.TextField(max_length=50, default='some string')
     description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)

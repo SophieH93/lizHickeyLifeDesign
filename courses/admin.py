@@ -4,13 +4,10 @@ from .models import Course, Review
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'sku',
         'name',
         'price',
         'image',
     )
-
-    ordering = ('sku',)
 
 
 class ReviewAdmin(admin.ModelAdmin):
