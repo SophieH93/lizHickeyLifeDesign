@@ -3,48 +3,45 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="image-container">
-                {% if course.image %}
-                    <a href="{{ course.image.url }}" target="_blank">
-                        <img class="blog-image img-fluid" src="{{ course.image.url}}" alt="{{ course.name }}">
-                    </a>
-                    {% else %}
-                    <!-- <a href="">
-                        <img class="card-img-top img-fluid" src="/static/images/noimage.png" alt="{{ course.name }}">
-                    </a> -->
-                {% endif %}
+                <a href="{{ course.image.url }}" target="_blank">
+                    <img class="blog-image img-fluid" src="{{ course.image.url}}" alt="{{ course.name }}">
+                </a>                  
             </div>
         </div>
         <div class="col-md-6 ">
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ course.name }}</p>
-                <p class="">€{{ course.price }}</p>
+                <h1 class="mb-0">{{ course.name }}</h1>
+                <h3 class="">Description: </h3>
+                <p> {{ course.description }}</p>
                 {% if course.rating %}
                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ course.rating }} / 5</small>
                 {% else %}
                     <small class="text-muted">No Rating</small>
                 {% endif %}
-                <p class="mt-3">{{ course.description }}</p>
 
                 <form id="form" method="POST" action="{% url 'add_to_cart' course.id %}">
                     {% csrf_token %}
                     <div class="form-row">
-                        <div class="col-12">
+                        <div class="col-md-6">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
-                                <div class="input-group">
+                                <!-- <div class="input-group"> -->
                                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <p class="mt-3"><strong>Price:</strong><p>
+                                <p>€{{ course.price }}</p>
+                        </div>
                         <div class="col-12">
-                            <a href="{% url 'courses' %}" class="btn ">                                
-                                <span class="text-uppercase">Keep Shopping</span>
+                            <a href="{% url 'courses' %}" class="btn ">Courses                         
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                            <input type="submit" class="btn" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>                                       
