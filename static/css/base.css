@@ -45,7 +45,28 @@ height: 30vh;
      margin-top: 15rem;
 } */
 
+.blog-image {
+    height: 40vh;
+    width: 55vh;
+           
+}
+
 .nav-link {
     color: #180e0e!important;    
     font-size: 1.3rem;
+}
+
+.blog-title {
+   text-align: center;
+}
+
+.review-user {
+    vertical-align: middle;
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+.card-img-top {
+    height: 30vh;
+    width: auto;
 }
