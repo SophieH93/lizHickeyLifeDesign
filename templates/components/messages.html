@@ -1,0 +1,7 @@
+{% if messages %}
+    <div class="container-messages ">
+        {% for message in messages %}
+            {% include 'toasts/success.html' %}
+        {% endfor %}
+    </div>
+{% endif %}

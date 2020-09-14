@@ -70,3 +70,20 @@ height: 30vh;
     height: 30vh;
     width: auto;
 }
+
+/*Toasts - messages*/
+.container-messages {
+position: fixed;
+top: 6rem;
+right: 0.1rem;
+/* z-index: 99999; */
+/* background-color: #074712; */
+}
+
+.toast-success{
+border: 0.2rem solid rgb(4, 29, 4);
+}
+
+.toast-success > .toast-header {
+    color: rgb(8, 99, 39);
+}
