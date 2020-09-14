@@ -9,32 +9,28 @@
             <h1>Shopping Cart</h1>            
         </div>
     </div>
-    <div class="row">
-        
+    <div class="row">        
             {% if cart_items %}
                 {% for item in cart_items %}
                     <div class="col-md-4">
-                        <img src="{{ item.course.image.url}}">
-                    </div>
-                    <div class="col-md-4">
-                        <p>{{ item.course.name}} </p>
-                        <p>Sku: {{ item.course.sku}} </p>
-                    </div>
-                     <div class="col-md-4">
-                        <p>€ {{ item.course.price}} </p>
-                    </div>
-                    <div class="col-md-4">
-                        <p>Quantity {{ item.quantity}} </p>
-                    </div>   
+                        <img class="img-thumbnail img-fluid " src="{{ item.course.image.url}}">
+                    </div> <br>
+                    
+                    <div class="col-md-8">
+                        <h2>Course: {{ item.course.name}} </h2>   
+                        <h3>Price: € {{ item.course.price}}  </h3>
+                        <h3>Quantity: {{ item.quantity}} </h3>
+                    </div>               
                 {% endfor %}
-                <div class="col-12">
+                 
+                <div class="col-md-12">
                     <a href="{% url 'courses' %}" class="btn ">                                
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase">Courses</span>
                     </a>
                     <a href="" class="btn ">                                
                         <span class="text-uppercase">Checkout</span>
                     </a>
-                </div>               
+                </div>   
             {% else %}
                 <h3>Your cart is empty!</h3>
                 <a href="{% url 'courses' %}">
@@ -44,3 +40,4 @@
         </div>
     </div>
 {% endblock %}
+
