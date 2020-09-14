@@ -14,7 +14,7 @@
                     <div class="card text-center" style="width: 16rem;">
                         {% if course.image %}
                         <a href="{% url 'course_detail' course.id %}">
-                            <img class="blog-image img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                            <img class="card-img-top img-fluid" src="{{ course.image_url }}" alt="{{ course.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'course_detail' course.id %}">
