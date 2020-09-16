@@ -49,7 +49,7 @@ def checkout(request):
                                 quantity=quantity,
                                 datetime=datetime,
                             )
-                            order_line_item.save()
+                        order_line_item.save()
                 except Course.DoesNotExist:
                     messages.error(request, (
                         "One of the courses in your bag wasn't found in our database. "
