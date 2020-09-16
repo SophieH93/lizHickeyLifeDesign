@@ -188,3 +188,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 GOOGLE_MAP_API_KEY = os.environ.get('GOOGLE_MAP_KEY')
 
+# Stripe
+STRIPE_CURRENCY = "eur"
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
