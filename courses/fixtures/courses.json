@@ -3,12 +3,27 @@
     "pk": 1,
     "model": "courses.course",
     "fields": {
-        "name": "course 1",
-        "description": "description of course will go here.",
-        "price": 11.99,
+        "name": "1 to 1 'Lifeboost Session'",
+        "excerpt": "Book a 50 minute Lifeboost session with Liz",
+        "description": "Each session has a specific topic and Liz uses her ideation skills to help get clarity and create a plan.",
+        "price": 90,
         "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
         "image": "vision_board.jpg" 
     }
-  }
+  },
+  {
+    "pk": 2,
+    "model": "courses.course",
+    "fields": {
+        "name": "Unique 1 day 'Lifedesign Magig' course",
+        "excerpt": "This unique one day was is fully online due to Covid.",
+        "description": "Each session has a specific topic and Liz uses her ideation skills to help get clarity and create a plan.",
+        "price": 190,
+        "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
+        "image": "vision_board.jpg" 
+    }
+  },
+
+
 
 ]
