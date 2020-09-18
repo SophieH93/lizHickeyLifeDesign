@@ -24,6 +24,17 @@
     }
   },
 
-
+    {
+    "pk": 3,
+    "model": "courses.course",
+    "fields": {
+        "name": "Online 'Lifedesign as a Lifeskill' course",
+        "excerpt": "Thsi is a 12 week course completly online.",
+        "description": "Each module comprises video and downloadable PDF information. The course is emailed to you each week and questions are welcome on our provate Facebook group.",
+        "price": 390,
+        "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
+        "image": "vision_board.jpg" 
+    }
+  }
 
 ]
