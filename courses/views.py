@@ -49,7 +49,7 @@ def add_course(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added course!')
-            return redirect(reverse('add_course'))
+            return redirect(reverse('courses'))
         else:
             messages.error(request, 'Failed to add course. Please ensure the form is valid.')
     else:
@@ -75,7 +75,7 @@ def edit_course(request, course_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated course!')
-            return redirect(reverse('course_description', args=[course.id]))
+            return redirect(reverse('course_detail', args=[course.id]))
         else:
             messages.error(request, 'Failed to update course. Please ensure the form is valid.')
     else:
