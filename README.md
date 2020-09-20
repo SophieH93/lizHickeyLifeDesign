@@ -225,6 +225,7 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 * [Stripe](https://stripe.com/gb)
 * [Django Secret Key Generator ](https://miniwebtool.com/django-secret-key-generator/)
 * [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)
+* [Whitenoise](https://devcenter.heroku.com/articles/django-assets)
 
 ## Databases
 * [PostgreSQL](https://www.postgresql.org/) - Production database
