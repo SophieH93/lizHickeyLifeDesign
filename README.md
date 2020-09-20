@@ -89,7 +89,7 @@ Purple, green, pink and orange.
 **Images-**
 
 ## Features
-test
+testing
 ## Future Features
 
 # Skeleton:
