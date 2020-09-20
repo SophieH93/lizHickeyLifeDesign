@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
 
-/* body {
-    margin-top: 5rem;
-} */
+body {
+    background-color:pink;
+} 
 
 header {
     padding-top: 3rem;
