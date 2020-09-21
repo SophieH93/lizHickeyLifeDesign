@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
 
-body {
+/* body {
     background-color:pink;
-} 
+}  */
 
 header {
     padding-top: 3rem;
@@ -34,8 +34,27 @@ header {
 
 #map{
 min-height: 400px;
-height: 30vh;
+height: 40vh;
+border: 1px solid blue;
 }
+
+
+.google_maps {
+    margin-top: 5rem;
+    text-align: center;
+    
+}
+
+.card {
+    margin-top: 3rem;
+}
+.card-img-top {
+    height: 33vh;
+    width: auto;
+}
+
+
+
 
 /* .nav{
    text-align: center;
@@ -49,6 +68,12 @@ height: 30vh;
     height: 40vh;
     width: 55vh;
            
+}
+
+.liz-image {
+    height: 70vh;
+    margin-top: 6rem;
+    border: 1px solid green;
 }
 
 .nav-link {
@@ -66,10 +91,7 @@ height: 30vh;
     height: 6.25rem;
 }
 
-.card-img-top {
-    height: 30vh;
-    width: auto;
-}
+
 
 /*Toasts - messages*/
 .container-messages {
@@ -150,6 +172,27 @@ border: 0.2rem solid rgb(4, 29, 4);
 select:invalid,
 select option[value=""]{
     color: #aab7c4 !important
+}
+
+/* Footer */
+
+
+.footer_nav_links {
+    font-size: 2rem;
+    font-weight: 500;
+      color: black;
+}
+
+.footer_nav_links li{
+     display: block;
+     color: black;
+}
+
+.media-icons {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  color: black;
 }
 
 
@@ -240,3 +283,26 @@ select option[value=""]{
     border-radius: 0;
 }
 
+@media only screen and (max-width: 480px) {
+
+     .brand_words {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    #logo {
+        height: 22vh;   
+        margin-left: 0;
+        
+    }
+
+    .brand_name {
+        text-align: right;
+        font-size: 0.1rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+}
