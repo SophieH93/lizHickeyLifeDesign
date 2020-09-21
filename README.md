@@ -148,15 +148,6 @@ Click [here](https://docs.djangoproject.com/en/3.0/ref/contrib/auth/) to read mo
 
 
 
-### **Testimonial**   
-
-
-
-| Name        | Field Type           | Validaion  |
-| ------------- |:-------------:| -----:|
-| Related User      | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='reviews' |
-| review content | TextField     |   null=False, blank=False, default='' |
-
 
 ### **Order**   
 The Order model within the checkout app holds the following data for the orders.
@@ -200,6 +191,23 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 |  Related User   | ForeignKey | serProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='reviews'|
 |  Related Product  | ForeignKey | Product, blank=False, Null=False, related_name='reviews' |
 | Review content |  TextField    |  null=False, blank=False, default=''|
+
+
+### **Blog**   
+
+
+
+
+| Name        | Field Type           | Validaion  |
+| ------------- |:-------------:| -----:|
+|  Title   | CharField | max_length=50 |
+|  slug  | SlugField | max_length=250, unique_for_date='publish'|
+| publish |  DateTimeField    | default=timezone.now|
+| author |  ForeignKey    | User, on_delete=models.CASCADE, related_name='blog_posts'|
+| content |  TextField    |  null=False, blank=False, default=''|
+| image_url |  URLField    |  max_length=1024, null=True, blank=True|
+| status |  CharField    |  max_length=10,  choices=options, default='draft'|
+
 
 # Technologies Used:
 ## Languages
@@ -285,6 +293,7 @@ The user is able to remove an item.
 * **Testing-** 
 
 * **Result-** 
+
 
 
 
