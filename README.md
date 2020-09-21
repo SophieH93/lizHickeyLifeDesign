@@ -271,16 +271,19 @@ When verification link is clicked in the email, user is redirected to the confir
 
 
 
-## Courses Page:
-* **Plan-** I will need to ensure that if a user clicks on the "View Details" button of a course that they are brought to the correct details of that course.   
-Adding a course to the cart buttons works, showing the course in the shopping cart.
+## Courses & Courses detail Page:
+* **Plan-** I will need to ensure that all the following work:
+    * I will need to ensure that if a user clicks on the **"View Details"** button or the image of a specific course that they are brought to the correct details of that course.  
+    * The course description appers in the detail page.    
+    * Login with **superuser** credentials and verify that the **Edit/Delete buttons appear** in both courses and course details pages under the image.
+    * The **"Add to Cart" button** on the course details pages works.
+    * The quantity range button works and calculate the total correctly.
+    
+* **Implementation-** I will setup the **course model** and **migrate** the table into the database, then create the view within the courses app that sends a GET request to the database and returns all the courses into the courses variable, making this available to the front end via the context in the return statement meant that I could loop through each course from the database and render the details using Djangos template language in the HTML.
 
+* **Testing-** All courses within the database were correctly rendered to the courses.html page and course detail page.
 
-* **Implementation-** 
-
-* **Testing-** 
-
-* **Result-** 
+* **Result-** Test **passed**. All the functionality works as expected, no bugs were found during the testing.
 
 ## Shopping Cart Page:
 * **Plan-** I will need to ensure that all the revelevent buttons work properly e.g continue shopping or proceed to payment'.    
