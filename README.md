@@ -298,6 +298,16 @@ The user is able to remove an item.
 * **Result-** 
 
 
+## Checkout:
+* **Plan-**  
+
+
+* **Implementation-** 
+
+* **Testing-** 
+
+* **Result-** 
+
 
 
 
@@ -313,6 +323,87 @@ The user is able to remove an item.
 
 # Deployment:
 ## **Run Locally:**
+* Open your prefered IDE (I used Gitpod)
+* Install [Python](https://www.python.org/), [Pip](https://pip.pypa.io/en/stable/installing/) and [Git](https://git-scm.com/).
+* Create a [Stripe](https://stripe.com/en-ie) account.
+
+**Directions**:
+1. Clone this repository into your IDE of your choice by pasting this command into the terminal
+```
+git clone https://github.com/SophieH93/lizhickeylifedesign
+```
+**Alternatively**, you can **save a copy** of this repository by clicking the green button **"Clone or download"** , then **"Download Zip"** button, and after extract the Zip file to your folder.
+
+2. In your terminal **change direcrory** (cd) to the correct file location or open a terminal session in the unzip folder.
+
+3. Enter the following commannd
+```
+python -m .venv venv
+```
+4. **Initilaize** the environment by using the following command.
+```
+venv\bin\activate 
+```
+
+5. **Install** all **requiremetns** by putting this command into your terminal:
+```
+pip3 install -r requirements.txt
+```
+6. **Set up environment variables:**
+    * Create a env.py file in the root directory.
+    * Create a .gitignore file.
+    * Add .env to the .gitignore file in your project's root directory
+    * Add the following environments to the eny.py file:
+    ```
+    import os 
+    os.environ["SECRET_KEY"] = "YourSecretKey"
+    os.environ["STRIPE_PUBLIC_KEY"] = "YourStripePublicKey"
+    os.environ["STRIPE_SECRET_KEY"] = "YourStripeSecretKey"
+    os.environ["STRIPE_WH_SECRET"] = "YourStripeWHKey"
+    os.environ["GOOGLE_MAP_KEY"] = "YourGoogleMapKey"
+    os.environ["DEVELOPMENT"] = "True"
+    os.environ["DATABASE_URL"] = "YourDatabaseURL"
+    os.environ["EMAIL_HOST_PASS"] = "EmailHostPassword"
+    os.environ["EMAIL_HOST_USER"] = "Youremail"
+    ```
+
+  7. **Creat** your **database**.
+        ```
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+
+        ```
+8. **Load** the data **fixtures** (courses)
+    ```
+    python3 manage.py loaddata courses
+
+    ```
+9. 8: Create a **superuser** for the project using the terminal, enter the following command.
+    ```
+    python3 manage.py createsuperuser
+
+    ```
+
+10. The app can now be ran locally using the following command.
+
+    ```
+    python3 manage.py runserver
+
+    ```
+
+11. To access the **admin panel**, you can add the /admin path at the end of the url link and login using your superuser credentials.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## **Deploy to Heroku:**
 1. **Create** a **requirements.txt** file using the command
