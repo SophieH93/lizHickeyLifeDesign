@@ -245,29 +245,22 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 
 
 ## Authentication Pages:
-* **Plan-**  I will need to implement a way that a user will be able to create an account and that their information is stored in a database.   
+* **Plan-**  I will need to implement a way that a user will be able to create an account and that their information is stored in a database, to log in and logout.   
 This invloves checking that the users passwords match when they create a password and confirm the password and their details are correct when they go to login.
 
 
-* **Implementation-** I will use Django allauth package to create Authentication for Register and Login Pages.   
-I will create severl sample accounts to test that validation works by entering two different passwords in registration form,   
+* **Implementation-** I will use Django allauth package to create Authentication for the Register and Login Pages.   
+I will create several sample accounts to test that validation works by entering two different passwords in registration form,   
 creating an account and try to login with correct and incorrect details.
-If the customer wishes to log out of their account I will need to ensure the logout link works
+If the customer wishes to log out of their account I will need to ensure the logout link works.
 
-* **Testing-** 
+* **Testing-** I used [Temp Mail](https://temp-mail.org/en/view/1a5285c005d2a6b0baf4c354391c4d6e) to create a temporary email and used my **Gmail** account to send real emails with Django. When the user register's on the website, an email will be sent to them asking them to verify their email. Once the user verifies their email they are able to log into the website.  
+When verification link is clicked in the email, user is redirected to the confirmation page, clicking "Confirm" button, success message is displayed and user is automatically logged in
 
-* **Result-** 
-
-## Landing Page:
-* **Plan-** I will need to ensure all the buttons click to the right page.   
-Verify that the expected text, icons and images are displayed
+![](static/images/emailConfirmation.JPG)
+* **Result-**  Test passed. All the functionality works as expected, no bugs were found during the testing.
 
 
-* **Implementation-** 
-
-* **Testing-** 
-
-* **Result-** 
 
 
 ## Courses Page:
