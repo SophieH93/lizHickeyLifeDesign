@@ -5,41 +5,53 @@
     background-color:pink;
 }  */
 
-header {
+/* header {
     padding-top: 3rem;
-}
+} */
+
+/* Header */
 
 #logo {
-    height: 28vh;
+    height: 30vh;
     width: auto;
     margin-left: 1rem;
     
 }
 
-.header-container {
-    text-align: center;
-
-}
-
-#signup_form {
-    text-align: center;
-
-}
-
-.brand_name {
+.brand_name > h1 {
     font-family: 'Baskervville', serif;
-    color: black;
-    text-align: center;
+   text-align: center;
+    margin-top: 3.2rem;
+    font-size: 3.3rem;
+    color: green;
 }
 
 .brand_words {
     text-align: right;
-    
+    margin-top: 3rem;
 }
 
 .title {
-    text-align: center;
-    background-color: gray;
+    text-align: center;   
+}
+
+/* Navigation */
+
+.navbar {
+    margin-top: 1rem;   
+}
+
+.nav-link {
+    color: #180e0e!important;    
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: all .15s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #581616!important;
+  transform: scale(1.1);
+  font-weight: 400;
 }
 
 #map{
@@ -86,10 +98,7 @@ border: 1px solid blue;
     border: 1px solid green;
 }
 
-.nav-link {
-    color: #180e0e!important;    
-    font-size: 1.3rem;
-}
+
 
 .blog-title {
    text-align: center;
