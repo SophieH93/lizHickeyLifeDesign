@@ -29,7 +29,7 @@
                         </div>
                         <div class="card-text">
                             <p>€{{ course.price}}
-                            <a href="#" class="card-link">View </a></p>
+                            <a href="{% url 'course_detail' course.id   %}" class="card-link">View </a></p>
                         </div>
                         {% if request.user.is_superuser %}
                             <small class="ml-3">
