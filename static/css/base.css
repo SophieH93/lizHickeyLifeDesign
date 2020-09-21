@@ -16,6 +16,16 @@ header {
     
 }
 
+.header-container {
+    text-align: center;
+
+}
+
+#signup_form {
+    text-align: center;
+
+}
+
 .brand_name {
     font-family: 'Baskervville', serif;
     color: black;
