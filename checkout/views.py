@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-
+from django.contrib.auth.decorators import login_required
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from courses.models import Course
@@ -13,6 +13,7 @@ from shopping_cart.contexts import cart_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -30,13 +31,14 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
+
+@login_required()
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-        
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
