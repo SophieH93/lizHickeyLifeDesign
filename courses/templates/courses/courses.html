@@ -2,57 +2,50 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">    
-                <h1> My Courses</h1>                       
-            </div>        
-        </div>
-        <div class="row">
-            {% for course in courses %}
-                <div class="col-md-4">
-                    <div class="card text-center" style="width: 16rem;">
-                        {% if course.image %}
-                        <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{{ course.image_url }}" alt="{{ course.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
-                        </a>
-                        {% endif %}
-                        <div class="card-header">
-                            <p>{{ course.name}}</p>                            
-                        </div>
-                        <div class="card-text">
-                            <p>{{ course.excerpt}}</p>
-                        </div>
-                        <div class="card-text">
-                            <p>€{{ course.price}}
-                            <a href="{% url 'course_detail' course.id   %}" class="card-link">View </a></p>
-                        </div>
-                        {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a href="{% url 'edit_course' course.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
-                            </small>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-        </div>
-    
+<div class="container">
     <div class="row">
-        <div class="col-12"> 
-            <h1>My wonderful clients are from all over the world</h1>          
+        <div class="col">    
+            <h1> My Courses</h1>                       
+        </div>        
+    </div>
+    <div class="row">
+        {% for course in courses %}
+            <div class="col-md-4">
+                <div class="card text-center" style="width: 16rem;">
+                    {% if course.image %}
+                    <a href="{% url 'course_detail' course.id %}">
+                        <img class="card-img-top img-fluid" src="{{ course.image_url }}" alt="{{ course.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'course_detail' course.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-header">
+                        <p>{{ course.name}}</p>                            
+                    </div>
+                    <div class="card-text">
+                        <p>{{ course.excerpt}}</p>
+                    </div>
+                    <div class="card-text">
+                        <p>€{{ course.price}}
+                        <a href="{% url 'course_detail' course.id   %}" class="card-link">View </a></p>
+                    </div>
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_course' course.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
+                        </small>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>    
+    <div class="row google_maps">
+        <div class="col-12 "> 
+            <h3 text-center>My wonderful clients are from all over the world!</h3>          
                 <div id="map"></div>
         </div>  
     </div>
-
 </div>
-<script src="{% static 'js/map.js' %}"></script> 
-<!--Google map API settings-->
-<script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{api_key}}&callback=initMap"></script>
-
 {% endblock %}
