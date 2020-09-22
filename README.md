@@ -286,29 +286,41 @@ When verification link is clicked in the email, user is redirected to the confir
 * **Result-** Test **passed**. All the functionality works as expected, no bugs were found during the testing.
 
 ## Shopping Cart Page:
-* **Plan-** I will need to ensure that all the revelevent buttons work properly e.g continue shopping or proceed to payment'.    
-That if a user wishes to proceed to the checkout that they are brought to the Registration page to create an account first.   
-The user is able to remove an item.
+* **Plan-**    I will need to ensure that all the following work:
+    * I will need to ensure that all the revelevent **buttons** work properly e.g courses and checkout'.     
+    * I will need to ensure that if a user wishes to **proceed to the checkout** that they are brought to the **Login page** to create an account first before proceeding to the checkout page.   
+    * I will need to ensure that if the user clicks on the cart without adding a course that the relevent message is displayed to advise the customer there is currently no items in the cart.
+    * I will need to ensure that when the user clicks the cart, that the correct **course information is displayed**.
+    * I will need to ensure the user can **remove** the **course** from the cart.
 
+* **Implementation-** I build a **context** file within the cart app and include this within the context processors section within templates in the settings file, this is to tell the app what the cart should look like by default and what information should be available to it. This is also required as the cart is not stored in the database, but rather in the **session**. I was able to create function in the views flie for adding a course to the shoppping cart.
 
-* **Implementation-** 
+* **Testing-** To test these cart features I had to do the following:
+    * Added a course to the shopping cart.
+    * Clicked on the cart and make sure the shopping cart template displays with the course added.
+    * Clicked the course button and see if it returns to the course page.
+    * Clicked on the checkout page to see if works.
+    * Clicked ok the remove item link to see if the course gets deleted from the shopping cart.
 
-* **Testing-** 
-
-* **Result-** 
+* **Result-** Tests passed based on the above criteria and information.
 
 
 ## Checkout:
-* **Plan-**  
+* **Plan-** I will need to create a **checkout form** and a secure **payment system**, a **confirmation email** of their order sent to the user and an **order summary**.
+    
+* **Implementation-** I followed the material provide by Code Instutute. I used [Strip](https://stripe.com/en-ie)  as the payment processor.  I created the **Order** and **OrderItem models** in the checkout app and peformed the migrations to setup the tables in the database. Then I create the form and views required and set up **Stripe validation** in a js file.
+I also want to ensure that the user is redirected to the **login/register** page **before** they can proceed to **checkout**.
 
 
-* **Implementation-** 
+* **Testing-** To test these cart features I had to do the following:
+    * Checked that **non-logged** in users are **redirected** to the **login page first** before they can proceed with their payment and that logged in users are bought straight to the checkout page.
+    * On the **checkout page**, verified the image and text was displayed correctly (**order summary**).
+    * Verified the form **validation** works by inputting incorrect details and trying to submit a empty field.
+    * Verified the **Payment** section enter the testing **4242 4242 4242 4242** card number, any expiration date in future and any CVC, and then click on the "Complete Order" button (this was also checked on Stripe Dashbord to see if the order was created).
+    * Once payment is completed, ensured the order summary was displayed.
+    * Once payment is **complete**, checked the **Stripe Dashboard** and also Order model in **Admin** panel to make sure the **order was created** via webhooks and was saved to the database.
 
-* **Testing-** 
-
-* **Result-** 
-
-
+* **Result-** All tests passed.
 
 
 
