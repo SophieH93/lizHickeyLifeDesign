@@ -1,15 +1,19 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 from courses.models import Course
 
 
 def shopping_cart(request):
-
+    """
+    Display users shopping cart.
+    """
     return render(request, 'shopping_cart/shopping_cart.html')
 
 
 def add_to_cart(request, item_id):
-    
+    """
+    Add course to the cart.
+    """
     course = Course.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -26,13 +30,17 @@ def add_to_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
+    """
+    Remove course from the cart.
+    """
     try:
         cart = request.session.get('cart', {})
-
+        course = get_object_or_404(Course, pk=item_id)
         cart.pop(item_id)
-
+        messages.info(request, f"Removed {course.name} from your cart.")
         request.session['cart'] = cart
-        return HttpResponse(status=200)
+        return redirect('shopping_cart')
 
     except Exception as e:
         return HttpResponse(status=500)
+

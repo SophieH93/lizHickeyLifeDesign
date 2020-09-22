@@ -20,6 +20,7 @@
                         <h2>Course: {{ item.course.name}} </h2>   
                         <h3>Price: € {{ item.course.price}}  </h3>
                         <h3>Quantity: {{ item.quantity}} </h3>
+                        <a href="{% url 'remove_from_cart' item.course.id %}">Remove from cart</a>
                     </div>               
                 {% endfor %}
                  
@@ -39,5 +40,7 @@
             {% endif %}
         </div>
     </div>
+
+
 {% endblock %}
 
