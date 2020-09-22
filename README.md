@@ -30,6 +30,13 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
     * [Tools](https://github.com/SophieH93/lizHickeyLifeDesign#tools)
     * [Databases](https://github.com/SophieH93/lizHickeyLifeDesign#databases)
 * [Testing](https://github.com/SophieH93/lizHickeyLifeDesign#testing)
+    * [Navbar/Footer](https://github.com/SophieH93/lizHickeyLifeDesign#navbarfooter)
+    * [Authentication Pages:](https://github.com/SophieH93/lizHickeyLifeDesign#authentication-pages)
+    * [Courses & Courses detail Page:
+](https://github.com/SophieH93/lizHickeyLifeDesign#courses--courses-detail-page)
+* [Shopping Cart Page:
+](https://github.com/SophieH93/lizHickeyLifeDesign#shopping-cart-page)
+* [Checkout](https://github.com/SophieH93/lizHickeyLifeDesign#checkout)
 * [Bugs](https://github.com/SophieH93/lizHickeyLifeDesign#bugs)
 * [Deployment](https://github.com/SophieH93/lizHickeyLifeDesign#deployment)
     *  [Locally run the project](https://github.com/SophieH93/lizHickeyLifeDesign#run-locally)
