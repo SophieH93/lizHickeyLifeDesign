@@ -22,7 +22,7 @@ def courses(request):
 
 def course_detail(request, course_id):
     """
-    A view to display an individula course information & Review form
+    A view to display an individual course information & Review form
     """
     course = get_object_or_404(Course, pk=course_id)
     review_form = ReviewForm()
@@ -39,7 +39,9 @@ def course_detail(request, course_id):
 
 @login_required
 def add_course(request):
-    """ Add a course to the website as a superuser"""
+    """ 
+    Add a course to the website as a superuser
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -64,7 +66,9 @@ def add_course(request):
 
 @login_required
 def edit_course(request, course_id):
-    """ Edit a course in the website as a superuser """
+    """ 
+    Edit a course in the website as a superuser 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -96,7 +100,6 @@ def delete_course(request, course_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
     course = get_object_or_404(Course, pk=course_id)
     course.delete()
     messages.success(request, 'course deleted!')
@@ -104,14 +107,18 @@ def delete_course(request, course_id):
 
 
 def add_review(request, course_id):
+    course = get_object_or_404(Course, pk=course_id)
 
-    if request.method == 'POST': 
-      review_form = ReviewForm(request.POST)
-      if review_form.is_valid():
-        review_form.save()
-        messages.success(request, "Your review has ben sent. Thank you for your interest.")
-        print('shit')
-        return redirect(reverse('course_detail'))
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.course = course
+            review.user = request.user
+            review_form.save()
+            messages.success(request, "Your review has ben sent.")
+            return redirect(reverse('course_detail', args=[course_id]))
+        else:
+            print(review_form.errors)
 
-    return redirect(reverse('course_detail'))
-
+    return redirect(reverse('course_detail',  args=[course_id]))
