@@ -343,9 +343,11 @@ I also want to ensure that the user is redirected to the **login/register** page
 * **The Bug:** I encountered an issue within the Blog app, where the **Blog url** was not linking to the page when I added the url to the navbar. I was getting a **NoReverseMatch** error message. I followed a Youble video to build the Blog.  
 **The Fix:** With the help of the Tutor's and Students we discovered that I was to remove **app_name = 'blog'** in the blog url file, the **blog** from the models file so it just returns reverse for post_single and **namespace** from the main url file.   
 
-* **The Bug:** I experienced a bug in the **checkout app** where I was getting the error **'no such column:checkout_orderlineitem.lineitem_total'** and a **ValidationError: '“2020-09-16 21:15:57.447790+00:00” value must be a decimal number.'**
+* **The Bug:** I experienced a bug in the **checkout app** where I was getting the error **'no such column:checkout_orderlineitem.lineitem_total'** and a **ValidationError: '“2020-09-16 21:15:57.447790+00:00” value must be a decimal number.'**   
 **The Fix:** I was able to eventually find the solution on Slack. I **deleted** my **current migrations** so I was back at the initial state in the migrations folder and deleted the models file in pycache folder and ran migrations again for the checkout app which solved the error.
 
+* **The Bug:** I experienced a bug with the **Review** moduel where it displayed a **400 bad request error** which lead to a **'NotNullViolation' error** when I tried to leave a review.   
+**The Fix:** The bug was eventually fixed, with views file amended.
 
 
 # Deployment:
