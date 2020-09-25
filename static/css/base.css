@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
-
-/* body {
-    background-color:pink;
+/* 
+body {
+    background-color: #f8fcf5;  
 }  */
 
 /* header {
@@ -38,7 +38,7 @@
 /* Navigation */
 
 .navbar {
-    margin-top: 1rem;   
+    margin-top: 1rem; 
 }
 
 .nav-link {
@@ -53,6 +53,33 @@
   transform: scale(1.1);
   font-weight: 400;
 }
+
+/* Landing Page */
+
+.banner {
+    padding: 2rem;
+    background-color: #f9f5fc;
+}
+
+.about{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.info {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.liz-home {
+    vertical-align: middle;
+    width: auto;
+    height: 30vh;
+}
+
+
 
 #map{
 min-height: 400px;
