@@ -468,8 +468,9 @@ heroku ps:scale web=1
 10. Click **Open App** to view the app.
 
 # Credits
-To created the allauth social media login in i followed [Codev Youtube video](https://www.youtube.com/watch?v=-TUEM2NCuVE)
-To create a Blog Model i followed [Django Project - Simple Blog App] (https://www.youtube.com/watch?v=AF4ji8bb1M8&ab_channel=veryacademy)
+* To created the allauth social media login in i followed [Codev Youtube video](https://www.youtube.com/watch?v=-TUEM2NCuVE)
+* To create a Blog Model i followed [Django Project - Simple Blog App](https://www.youtube.com/watch?v=AF4ji8bb1M8&ab_channel=veryacademy)
+* [Elfsight](https://apps.elfsight.com/) for Instagram widget.
 
 
 
