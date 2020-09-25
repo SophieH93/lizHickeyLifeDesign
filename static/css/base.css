@@ -79,7 +79,11 @@ body {
     height: 30vh;
 }
 
-
+.call-to-action  {
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: #000;
+}
 
 #map{
 min-height: 400px;
