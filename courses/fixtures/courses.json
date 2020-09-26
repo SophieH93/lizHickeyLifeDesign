@@ -7,20 +7,20 @@
         "excerpt": "Book a 50 minute Lifeboost session with Liz on Zoom or Facebook messenger",
         "description": "Each session has a specific topic and Liz uses her ideation skills to help get clarity and create a plan.",
         "price": 90,
-        "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
-        "image": "vision_board.jpg" 
+        "image_url": "https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "image": "online.jpg" 
     }
-  },
+  }, 
   {
     "pk": 2,
     "model": "courses.course",
     "fields": {
-        "name": "'Lifedesign Magic' Unique 1 day experience",
+        "name": "'Lifedesign Magic' 1 day experience",
         "excerpt": "This unique one day was live but now online due to Covid restrictions.",
         "description": "Each session has a specific topic and Liz uses her ideation skills to help get clarity and create a plan.",
         "price": 190,
-        "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
-        "image": "vision_board.jpg" 
+        "image_url": "https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "image": "group.jpg" 
     }
   },
 
@@ -29,11 +29,11 @@
     "model": "courses.course",
     "fields": {
         "name": "'Lifedesign as a Lifeskill' 12 week course",
-        "excerpt": "Thsi is a 12 week course completly online.",
+        "excerpt": "This is a 12 week course completly online.",
         "description": "Each module comprises video and downloadable PDF information. The course is emailed to you each week and questions are welcome on our provate Facebook group.",
         "price": 390,
-        "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
-        "image": "vision_board.jpg" 
+        "image_url": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "image": "onlinecourse.jpg" 
     }
   }
 
