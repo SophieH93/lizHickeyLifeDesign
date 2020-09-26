@@ -158,6 +158,19 @@ border: 1px solid blue;
      margin-top: 15rem;
 } */
 
+
+
+
+
+/*Liz's Book Page*/
+
+.liz-book > h1 {
+    padding-bottom: 2rem;
+
+}
+
+
+
 .blog-image {
     height: 40vh;
     width: 55vh;
@@ -201,7 +214,7 @@ border: 0.2rem solid rgb(4, 29, 4);
     color: rgb(8, 99, 39);
 }
 
-
+/*Stripe*/
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -267,23 +280,27 @@ select option[value=""]{
 
 /* Footer */
 
+footer {
+    background-color: #66015e;
+    color: white;
+    padding-bottom: 1rem;
+
+}
 
 .footer_nav_links {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
-      color: black;
 }
 
 .footer_nav_links li{
-     display: block;
-     color: black;
+    display: block;
 }
 
 .media-icons {
   font-size: 1.5rem;
   padding: 0.3rem;
   margin-top: 1rem;
-  color: black;
+  color: white;
 }
 
 
