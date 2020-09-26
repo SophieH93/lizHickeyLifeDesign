@@ -5,34 +5,34 @@ body {
     background-color: #f8fcf5;  
 }  */
 
-/* header {
-    padding-top: 3rem;
-} */
+
 
 /* Header */
 
+header {
+    background-color: #66015e;
+    color: white;
+    padding-bottom: 3rem;
+   
+}
+
 #logo {
-    height: 30vh;
-    width: auto;
-    margin-left: 1rem;
-    
+    width: auto; 
+    margin-top: 3rem;
+   
 }
 
 .brand_name > h1 {
     font-family: 'Baskervville', serif;
-   text-align: center;
+    text-align: center;
     margin-top: 3.2rem;
-    font-size: 3.3rem;
-    color: green;
+    font-size: 4rem;
+    font-weight: 500;
 }
 
 .brand_words {
     text-align: right;
-    margin-top: 3rem;
-}
-
-.title {
-    text-align: center;   
+    margin-top: 3rem;    
 }
 
 /* Navigation */
@@ -42,16 +42,17 @@ body {
 }
 
 .nav-link {
-    color: #180e0e!important;    
+    color: #10540a!important;    
     font-size: 1.5rem;
     letter-spacing: 1px;
+    font-weight: 500;
     transition: all .15s ease-in-out;
+    margin: 1rem;
 }
 
 .nav-link:hover {
   color: #581616!important;
   transform: scale(1.1);
-  font-weight: 400;
 }
 
 /* Landing Page */
