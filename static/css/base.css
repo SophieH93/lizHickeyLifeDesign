@@ -164,16 +164,25 @@ border: 1px solid blue;
 
 /*Liz's Book Page*/
 
+.book-header {
+    color: #10540a;
+}
 .book_description  {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-top: 1rem;
 }
 
-
-.book > h1 {
-    color: red;
+.author_liz {
+    padding-bottom: 3rem;
 }
 
+
+.summitbookimg {
+    /* height: 100%; */
+    width: 50vh;
+    border: 3px solid #66015e;
+
+}
 
 .blog-image {
     height: 40vh;
