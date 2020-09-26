@@ -3,47 +3,47 @@
 {% load static %}
 {% block content %}
 
-<section class="container-fluid banner">
-    <h2 class="d-flex justify-content-center ">Welcome to the world of LIFEDESIGN</h2>
+
+<section class="container-fluid banner1">
+    <h2>IMAGINE A LIFESKILL THAT CAN </h2>
+    <h2> HELP YOU IMPROVE ALMOST EVERY PART OF YOUR LIFE!</h2>
 </section>
+
+<!-- <section class="container-fluid banner">
+    <h2 class="d-flex justify-content-center ">Welcome to the world of LIFEDESIGN</h2>
+</section> -->
 
 <!-- <hr style="height:2px;border-width:0;color:gray;background-color:gray"> -->
 
 <section class="container about ">
     <div class="row">
-        <div class="col-md-4" data-aos="fade-up"  data-aos-duration="1000" >
-            <p>How are you? How is life going? Could you do with a boost in confidence, save, focues and a plan?</p> 
-            <p>Would you like to learn a unique lifeskill you can use to improve almost every area of your life. </p>
+        <div class="col-4" data-aos="fade-up"  data-aos-duration="1000" >
+            <p>How are you? How is life going? Could you do with a boost in confidence, some focus and a plan to get you where you want to go?</p> 
+
+            <p>Would you like to learn a unique lifeskill that is a like a superpower?</p>
+
+            <p>You are in the right place.</p>
         </div>
-        <div class="col-md-4">
-            <img src="{{ STATIC_URL }}static/images/liz2.jpg" class="rounded-circle liz-home" data-aos="zoom-in" data-aos-duration="2000"> 
+        <div class="col-4">
+            <img src="{{ STATIC_URL }}static/images/lizimg.jpg" class="img-fluid liz-home" data-aos="zoom-in" data-aos-duration="2000"> 
+            <p>~ Creator of LIFEDESIGN ~ </p>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
-            <p>I help people from all over the world who are sensitive fell "different" or left out, have suffered a life disappointment,
-            lost a relationship or friendship and just feel a bit weary want life to be better.</p>
+        <div class="col-4" data-aos="fade-up" data-aos-duration="1000">
+            <p>I help people from all over the world to solve problems creatively and create the life they wish for and the results are amazing!</p>
         </div>
     </div>
 </section>
-<hr>
 
-<section class="container-fluid d-flex justify-content-center banner" data-aos="fade-right" data-aos-duration="2000">
-    <h3> To get to know me better follow me on 
-        <a href="https://www.facebook.com/lizlifedesigncoaching" target="_blank" rel="noopener"
-         aria-label="link-to-facebook" class="icon-footer-container">
-            <i class="fab fa-facebook facebook-icons" aria-hidden="true"></i>
-        </a>
-    </h3>
+<section class="container-fluid banner2">
+    <h2>Welcome to the world of LIFEDESIGN</h2>
 </section>
 
 
-
-
-
-
-<section class="container info">
-     <p>I help people who are sensitive, feel different or left out, have suffered a life dissappointment, lost a relationship or friendship and just feel a bit weary of life from all around the world. </p>
+<section class="container-fluid banner3">
+    <h2>Check out how your can work with me    
+        <a href="{% url 'courses' %}"> here</a>  
+        </h2>
 </section>
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 
 <section class="container-fluid d-flex justify-content-center banner" data-aos="fade-up" data-aos-duration="2000">
@@ -53,81 +53,11 @@
 
 
 
-<section class="container call-to-action">
-<div class="row"> 
-    <div class="col-md-4">
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lifedesigner1/15min'});return false;">Book your free Consultation</a>       
-    </div>
-    <div class="col-md-4">
-       <a href="{% url 'contact' %}">Contact me for more information</a>       
-    </div>
-    <div class="col-md-4">
-         <a href="{% url 'courses' %}">Purschase a LIFEDESIGN course</a>
-    </div>
-</div>
-</section>
-
-
-<section class="container-fluid d-flex justify-content-center banner" data-aos="fade-right" data-aos-duration="2000">
-    <h3> Follow me on 
-        <a href="https://www.pinterest.ie/lizhickey/" target="_blank" rel="noopener"
-         aria-label="link-to-pinterest" class="icon-footer-container">
-            <i class="fab fa-pinterest facebook-icons" aria-hidden="true"></i>
-        </a>
-    </h3>
-</section>
-
 <!-- Instagram Feed -->
 <section class="container"  data-aos="fade-up"  data-aos-duration="3000">
     <div class="elfsight-app-a04e6506-dbd9-4722-a92c-a93dbf8a2425"></div>
 </section>
 
-
-<!-- 
-<section class="container ">
-    <h3>The results of LIFEDESIGN can be quite amazing </h3> 
-        <div id="testimonial-carouse" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <img src="{{ STATIC_URL }}static/images/sophie.jpg" class="rounded-circle review-user" alt="...">
-                        </div>
-                        <div class="col-sm-12 col-md-8 review-content">
-                            <p>                      
-                                <i class="fas fa-quote-left"></i>
-                                Amazing tea! Really good quality and affordable prices! Fast delivery. 
-                                I would recommend Art of Tea to everyone!
-                                <i class="fas fa-quote-right"></i>
-                            </p>
-                            <p class="text-right font-italic"> - Sophie</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <img src="{{ STATIC_URL }}static/images/girl.jpg" class="rounded-circle review-user" alt="...">
-                        </div>
-                        <div class="col-sm-12 col-md-8 review-content">
-                            <p>
-                                <i class="fas fa-quote-left"></i>
-                                Amazing tea! Really good quality and affordable prices! Fast delivery. 
-                                I would recommend Art of Tea to everyone!
-                                <i class="fas fa-quote-right"></i>
-                            </p>
-                            <p class="text-right font-italic"> - Jade</p>
-                        </div>
-                    </div>               
-                </div>
-            </div>             
-        </div>        
-</section>
- -->
-
-
- 
-</section> -->
 
 
 <!-- Calendly -->
