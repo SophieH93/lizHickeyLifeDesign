@@ -164,11 +164,15 @@ border: 1px solid blue;
 
 /*Liz's Book Page*/
 
-.liz-book > h1 {
-    padding-bottom: 2rem;
-
+.book_description  {
+    font-size: 1.3rem;
+    margin-top: 1rem;
 }
 
+
+.book > h1 {
+    color: red;
+}
 
 
 .blog-image {
