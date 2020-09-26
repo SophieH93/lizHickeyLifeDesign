@@ -164,9 +164,9 @@ border: 1px solid blue;
 
 /*Liz's Book Page*/
 
-.book-header {
+/* .book-header {
     color: #10540a;
-}
+} */
 .book_description  {
     font-size: 1.4rem;
     margin-top: 1rem;
@@ -184,18 +184,21 @@ border: 1px solid blue;
 
 }
 
-.blog-image {
-    height: 40vh;
-    width: 55vh;
-           
+/*About Page*/
+h2 {
+    color: #10540a;
 }
 
 .liz-image {
-    height: 70vh;
-    margin-top: 6rem;
-    border: 1px solid green;
+    border: 3px solid #10540a;
+    width: 50vh;
+    margin-top: 4rem;
+    float: right;
 }
 
+.about_text {
+    font-size: 1.2rem;
+}
 
 
 .blog-title {
@@ -208,7 +211,11 @@ border: 1px solid blue;
     height: 6.25rem;
 }
 
-
+.blog-image {
+    height: 40vh;
+    width: 55vh;
+           
+}
 
 /*Toasts - messages*/
 .container-messages {
