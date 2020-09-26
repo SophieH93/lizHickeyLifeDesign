@@ -76,7 +76,8 @@ body {
 .liz-home {
     vertical-align: middle;
     width: auto;
-    height: 30vh;
+    height: 50vh;
+    border: 2px solid #581616;
 }
 
 .call-to-action  {
@@ -84,6 +85,32 @@ body {
     font-size: 1.5rem;
     color: #000;
 }
+
+
+
+
+/* Course Page*/
+
+
+.card {
+    margin-top: 3rem;
+    border: 1px solid green;
+}
+
+ .card-header {
+    border: 1px solid green;
+
+ }
+
+.card-text {
+    margin-top: 1rem;
+}
+
+.card-img-top {
+    height: 33vh;
+    width: auto;
+}
+
 
 #map{
 min-height: 400px;
@@ -97,17 +124,6 @@ border: 1px solid blue;
     text-align: center;
     
 }
-
-.card {
-    margin-top: 3rem;
-}
-.card-img-top {
-    height: 33vh;
-    width: auto;
-}
-
-
-
 
 /* .nav{
    text-align: center;
