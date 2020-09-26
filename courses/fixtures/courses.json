@@ -3,8 +3,8 @@
     "pk": 1,
     "model": "courses.course",
     "fields": {
-        "name": "1 to 1 'Lifeboost Session'",
-        "excerpt": "Book a 50 minute Lifeboost session with Liz",
+        "name": "'Lifeboost Session' Online 1 to 1 ",
+        "excerpt": "Book a 50 minute Lifeboost session with Liz on Zoom or Facebook messenger",
         "description": "Each session has a specific topic and Liz uses her ideation skills to help get clarity and create a plan.",
         "price": 90,
         "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
@@ -15,8 +15,8 @@
     "pk": 2,
     "model": "courses.course",
     "fields": {
-        "name": "Unique 1 day 'Lifedesign Magig' course",
-        "excerpt": "This unique one day was is fully online due to Covid.",
+        "name": "'Lifedesign Magic' Unique 1 day experience",
+        "excerpt": "This unique one day was live but now online due to Covid restrictions.",
         "description": "Each session has a specific topic and Liz uses her ideation skills to help get clarity and create a plan.",
         "price": 190,
         "image_url": "https://www.designsponge.com/wp-content/uploads/2019/08/visionboard_grace_2019.jpg",
@@ -28,7 +28,7 @@
     "pk": 3,
     "model": "courses.course",
     "fields": {
-        "name": "Online 'Lifedesign as a Lifeskill' course",
+        "name": "'Lifedesign as a Lifeskill' 12 week course",
         "excerpt": "Thsi is a 12 week course completly online.",
         "description": "Each module comprises video and downloadable PDF information. The course is emailed to you each week and questions are welcome on our provate Facebook group.",
         "price": 390,
