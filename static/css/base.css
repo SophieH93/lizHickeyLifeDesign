@@ -51,21 +51,46 @@ header {
 }
 
 .nav-link:hover {
-  color: #581616!important;
+  color: #66015e!important;
   transform: scale(1.1);
 }
 
 /* Landing Page */
 
-.banner {
+.banner1 {
     padding: 2rem;
-    background-color: #f9f5fc;
+    color: #66015e;
+    text-align: center;
 }
+
+.banner2  {
+    padding: 2rem;
+    background-color:  #66015e;
+    color: white;
+    text-align: center;
+}
+
+.banner2 > h2 {
+    font-size: 3rem;
+
+}
+
+.banner3  {
+    padding: 2rem;
+    color: #10540a;
+    text-align: center;
+}
+
+.banner3 > h2 > a {
+    color: #10540a;
+}
+
 
 .about{
     margin-top: 3rem;
     text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .info {
@@ -75,10 +100,9 @@ header {
 }
 
 .liz-home {
-    vertical-align: middle;
-    width: auto;
+    border: 3px solid #66015e;
     height: 50vh;
-    border: 2px solid #581616;
+    margin-bottom: 1rem;
 }
 
 .call-to-action  {
