@@ -123,11 +123,11 @@ header {
 .card {
     height: 55vh;
     margin-top: 3rem;
-    border: 1px solid green;
+    border: 1px solid #10540a;
 }
 
  .card-header {
-    border: 1px solid green;
+    border: 1px solid #10540a;
     font-weight: 500;
     font-size: 1.2rem;
 
@@ -138,10 +138,75 @@ header {
     font-size: 1.3rem;
 }
 
-/* .card-img-top {
-    height: 33vh;
-    width: auto;
-} */
+/* Single Course Page*/
+
+#course_detail_page {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.card-img-top  {
+    border: 2px solid #10540a;
+}
+
+.course-description-heading {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #66015e;
+}
+
+.course-description {
+    font-size: 1.3rem;
+    margin-top: 1rem;   
+}
+
+#course_form  {
+    margin-top: 3rem;   
+}    
+
+.buttons {
+    margin-top: 2rem;     
+    text-align: center;
+}
+
+.btn {
+    background-color: #66015e;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+#user-reviews {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+
+}    
+
+.single-review {
+    margin-top: 4rem;
+}
+
+.all-reviews {
+    text-align: left;
+
+}
+.review-rating {
+    color: rgb(231, 184, 81);
+}
+
+.fa-user {
+    color: #66015e;
+}
+
+.review-form {
+    width: 100%;
+}
+
+
+
+
+
+
 
 
 #map{
@@ -205,15 +270,24 @@ h2 {
 }
 
 
+
+
+
+
+
+
+
+
+
 .blog-title {
    text-align: center;
 }
 
-.review-user {
+/* .review-user {
     vertical-align: middle;
     width: 6.25rem;
     height: 6.25rem;
-}
+} */
 
 .blog-image {
     height: 40vh;
