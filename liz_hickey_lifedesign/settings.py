@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'about_liz',
     'contact',
     'book',
+    'testimonials',
     'shopping_cart',
     'blog',
     'checkout',
