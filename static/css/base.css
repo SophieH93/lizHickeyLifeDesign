@@ -103,22 +103,26 @@ header {
       transform: scale(1.1);
 }
 
-.info {
-    font-size: 1.5rem;
-    padding: 1.5rem;
-    text-align: center;
+/*About Page*/
+h2 {
+    color: #14660c;
 }
 
-
-
-
-.call-to-action  {
-    padding: 3rem;
-    font-size: 1.5rem;
-    color: #000;
+.liz-image {
+    border: 6px solid #14660c;
+    width: 50vh;
+    margin-top: 4rem;
+    float: right;
 }
 
+.about_text {
+    font-size: 1.2rem;
+    color: #14660c;
+}
 
+.about_text > p {
+    padding-top: 1rem;
+}
 
 
 /* Course Page*/
@@ -260,26 +264,7 @@ border: 1px solid blue;
 
 }
 
-/*About Page*/
-h2 {
-    color: #10540a;
-}
 
-.liz-image {
-    border: 6px solid #10540a;
-    width: 50vh;
-    margin-top: 4rem;
-    float: right;
-}
-
-.about_text {
-    font-size: 1.2rem;
-    color: green;
-}
-
-.about_text > p {
-    padding-top: 2rem;
-}
 
 .contact-form {
  margin-top: 3rem;
