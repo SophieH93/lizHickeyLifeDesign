@@ -128,14 +128,29 @@ The page also consists of a **review form** where logged in user can leave a rev
 # Surface:
 ## Design Choice
 
-**Typography-**
+**Typography-** [Baskervville](https://fonts.google.com/specimen/Baskervville?query=bask) for the brand name and [Lato](https://fonts.google.com/specimen/Lato?query=lato) for the body, which was both embedded from [Google Fonts](https://fonts.google.com/).
 
-**Colours-**
-Purple, green, pink and orange.
+**Colours-** The color for the site is very simple as Liz wanted to use **Joule colours** - purple and green. 
+
+![](static/images/colorPalette.JPG)
+
+**Animations:** I used two tyes of animations on this website, one for scrolling on a page and the other as an anchor as some pages do not require the user to scroll. I used [AOS-Animate on scroll](https://github.com/michalsnik/aos) which is used on the home and testimonials pages and [Animate.css](https://animate.style/).
+
 **Images-**
+The images chosen for the website were taking from [Unsplash](https://unsplash.com/) and provided by Liz.
 
 ## Features
-testing
+* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [AOS](https://github.com/michalsnik/aos)
+* [Animate.css](https://animate.style/)
+* [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview)
+* [Stripe](http://stripe.com/)
+* [Gmail](https://gmail.com/)
+* [Elfsight](https://apps.elfsight.com/)
+* [Postgres](https://www.postgresql.org/)
+
+
+
 ## Future Features
 
 # Skeleton:
