@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Course, Review
@@ -8,13 +7,12 @@ from .forms import ReviewForm, CourseForm
 
 def courses(request):
     """
-    A view to display all courses & google map api
+    A view to display all courses
     """
     courses = Course.objects.all()
 
     context = {
         'courses': courses,
-        'api_key': settings.GOOGLE_MAP_API_KEY,
     }
 
     return render(request, 'courses/courses.html', context)
