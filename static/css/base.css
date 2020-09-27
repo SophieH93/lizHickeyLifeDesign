@@ -12,7 +12,6 @@ body {
 header {
     background-color: #66015e;
     color: white;
-    padding-bottom: 3rem;
    
 }
 
@@ -30,19 +29,23 @@ header {
     font-weight: 500;
 }
 
-.brand_words {
+.brand_words  {
     text-align: right;
-    margin-top: 3rem;    
+    margin-top: 3rem;   
+    color: white; 
 }
 
 /* Navigation */
 
+
 .navbar {
     margin-top: 1rem; 
+        color: white!important;    
+
 }
 
 .nav-link {
-    color: #10540a!important;    
+    color: white!important;    
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-weight: 500;
@@ -77,7 +80,7 @@ header {
 
 .banner3  {
     padding: 2rem;
-    color: #10540a;
+    color: #14660c;
     text-align: center;
 }
 
