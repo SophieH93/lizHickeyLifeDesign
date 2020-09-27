@@ -281,8 +281,9 @@ h2 {
     color: green;
 }
 
-
-
+.about_text > p {
+    padding-top: 2rem;
+}
 
 .contact-form {
  margin-top: 3rem;
