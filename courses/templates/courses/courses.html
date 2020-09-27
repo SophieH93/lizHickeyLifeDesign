@@ -1,51 +1,43 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 <div id="courses" class="container animate__animated animate__fadeIn animate__slower">
-    <div class="row">
-        <div class="col">    
-            <h2> My Courses</h2>                       
-        </div>        
-    </div>
-    <div class="row">
-        {% for course in courses %}
-            <div class="col-md-4">
-                <div class="card text-center">
-                    {% if course.image %}
-                    <a href="{% url 'course_detail' course.id %}">
-                        <img class="img-fluid" src="{{ course.image_url }}" alt="{{ course.name }}">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'course_detail' course.id %}">
-                        <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
-                    </a>
-                    {% endif %}
-                    <div class="card-header">
-                        <p>{{ course.name}}</p>                            
-                    </div>
-                    <div class="card-text">
-                        <p>{{ course.excerpt}}</p>
-                    </div>
-                    <div class="card-text">
-                        <p>€{{ course.price}}
-                        <a href="{% url 'course_detail' course.id   %}" class="card-link">View </a></p>
-                    </div>
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_course' course.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
-                        </small>
-                    {% endif %}
-                </div>
+   <div class="row">
+      <div class="col">
+         <h2> My Courses</h2>
+      </div>
+   </div>
+   <div class="row">
+      {% for course in courses %}
+      <div class="col-md-4">
+         <div class="card text-center">
+            {% if course.image %}
+            <a href="{% url 'course_detail' course.id %}">
+            <img class="img-fluid" src="{{ course.image_url }}" alt="{{ course.name }}">
+            </a>
+            {% else %}
+            <a href="{% url 'course_detail' course.id %}">
+            <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
+            </a>
+            {% endif %}
+            <div class="card-header">
+               <p>{{ course.name}}</p>
             </div>
-        {% endfor %}
-    </div>    
-    <!-- <div class="row google_maps">
-        <div class="col-12 "> 
-            <h3 text-center>My wonderful clients are from all over the world!</h3>          
-                <div id="map"></div>
-        </div>  
-    </div> -->
+            <div class="card-text">
+               <p>{{ course.excerpt}}</p>
+            </div>
+            <div class="card-text">                      
+               <a href="{% url 'course_detail' course.id   %}" class="card-link">Read more </a>
+            </div>
+            {% if request.user.is_superuser %}
+            <small class="ml-3">
+            <a href="{% url 'edit_course' course.id %}">Edit</a> | 
+            <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
+            </small>
+            {% endif %}
+         </div>
+      </div>
+      {% endfor %}
+   </div>
 </div>
 {% endblock %}
