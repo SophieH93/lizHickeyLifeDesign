@@ -175,30 +175,17 @@ Click [here](https://docs.djangoproject.com/en/3.0/ref/contrib/auth/) to read mo
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
-|  auth_user      | ForeignKey | max_length=20, blank=False |
-| Full Name       | CharField | max_length=20, blank=False |
+|  user      | OneToOneField | User, on_delete=models.CASCADE |
 | Phone Number    | CharField      |  max_length=20, null=True, blank=True  |
-| Address Line1 |  CharField  |   max_length=60, null=True, blank=True |
-| Address Line |  CharField   |   max_length=60, null=True, blank=True  |
-| Town/City |   CharField   |  max_length=50, null=True, blank=True   |
-| County |  CharField  |  max_length=50, null=True, blank=True   |
+| Address Line1 |  CharField  |   max_length=80, null=True, blank=True |
+| Address Line |  CharField   |   max_length=800, null=True, blank=True  |
+| Town/City |   CharField   |  max_length=40, null=True, blank=True   |
+| County |  CharField  |  max_length=80, null=True, blank=True   |
 | Postcode |  CharField   |  max_length=20, blank=True   |
-| Country |  CountryField    |  max_length=30, blank=True   |
+| Country |  CountryField    |  blank_label='Country ', null=True, blank=True |
 
 
 
-
-### **User login/register/contact**
-
-
-| Name        | Field Type           | Validaion  |
-| ------------- |:-------------:| -----:|
-| email      | EmailField      |   OneToOneField 'User' |
-| password | CharField     |    $OneToOneField 'User'|
-| Full Name       | CharField | max_length=20, blank=False |
-| email      | EmailField      |   OneToOneField 'User' |
-| password | CharField     |    $OneToOneField 'User'|
-| body     | CharField | max_length=50, null=True, blank=True | 
 
 ### **Course**   
 
@@ -206,9 +193,11 @@ Click [here](https://docs.djangoproject.com/en/3.0/ref/contrib/auth/) to read mo
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
+|  excerpt    | TextField | max_length=30, default='some string'|
 |  name   | CharField | max_length=254|
-| description      | TextField      |   max_length=800 |
-| image | ImageField     |   upload_to="static/images"|
+| description      | TextField      | 
+| image_url | URLField     |   max_length=1024, null=True, blank=True|
+| image | ImageField     |   null=True, blank=True|
 | price     | DecimalField | max_digits=6, decimal_places=2 | 
 
 
@@ -221,17 +210,23 @@ The Order model within the checkout app holds the following data for the orders.
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
-|  Related User    | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='orders' |
-|  Full Name   | CharField | max_length=254|
+|   order_number  | CharField | max_length=32, null=False, editable=False|
+|   User    | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='orders' |
+|  Full Name   | CharField | max_length=50, null=False, blank=False |
 | Phone Number    | CharField      |  max_length=20, null=True, blank=True  |
-| email      | EmailField      |   OneToOneField 'User' |
-| Address Line1 |  CharField  |   max_length=60, null=True, blank=True |
-| Address Line |  CharField   |   max_length=60, null=True, blank=True  |
-| Town/City |   CharField   |  max_length=50, null=True, blank=True   |
-| Postcode |  CharField   |  max_length=20, blank=True   |
-| Country |  CountryField    |  max_length=30, blank=True   |
-| Date |  DateTimeField    |  auto_now_add=True |
-| Total Price |  DecimalField    | max_digits=10, decimal_places=2 |
+| email      | EmailField      |  max_length=254, null=False, blank=False|
+| Address Line1 |  CharField  |   max_length=80,null=False, blank=False |
+| Address Line |  CharField   |   max_length=80, null=False, blank=False |
+| Town/City |   CharField   |  max_length=40, null=False, blank=False   |
+| Postcode |  CharField   |  max_length=20, blank=True,  null=True,  |
+| Country |  CountryField    |  blank_label='Country *', null=False, blank=False |
+| county  |  CountryField    |  max_length=80, null=True, blank=True|
+| purchase_date |  DateTimeField    |  auto_now_add=True |
+| order_total |  DecimalField    | max_digits=10, decimal_places=2, null=False, default=0 |
+| original_cart |  TextField    | ld(null=False, blank=False, default=''|
+| stripe_pid|  CharField    | max_length=254, null=False, blank=False, default=''|
+
+
 
 
 ### **Order Item Detail**   
@@ -241,10 +236,14 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
-|  Order   | ForeignKey |Order, null=False|
-|  Product  | ForeignKey | Product, null=False|
-| Purchase Date |  DateTimeField    |  auto_now_add=True |
-| Total Price |  DecimalField    | max_digits=10, decimal_places=2 |
+|  Order   | ForeignKey |Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems'|
+|  Course  | ForeignKey | Course, null=False, blank=False, on_delete=models.CASCADE |
+| quantity |  IntegerField    |  null=False, blank=False, default=0|
+| Total Price |  DecimalField    | maax_digits=6, decimal_places=2,null=False, blank=False, editable=False,  default=0|
+| datetime  |  CharField    |  null=True, blank=True, max_length=20|
+
+
+
 
 ### **Reviews**   
 
@@ -253,9 +252,10 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
-|  Related User   | ForeignKey | serProfile, on_delete=models.SET_NULL, null=False, blank=False, related_name='reviews'|
-|  Related Product  | ForeignKey | Product, blank=False, Null=False, related_name='reviews' |
-| Review content |  TextField    |  null=False, blank=False, default=''|
+|   User   | ForeignKey | User, on_delete=models.CASCADE'|
+|  course   | ForeignKey | Course, on_delete=models.CASCADE|
+| Review  |  TextField    |  null=False, blank=False, default=''|
+| rate  |  IntegerField    |  choices=RATING_CHOICES, default=0|
 
 
 ### **Blog**   
@@ -265,11 +265,11 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 
 | Name        | Field Type           | Validaion  |
 | ------------- |:-------------:| -----:|
-|  Title   | CharField | max_length=50 |
+|  Title   | CharField | max_length=250 |
 |  slug  | SlugField | max_length=250, unique_for_date='publish'|
 | publish |  DateTimeField    | default=timezone.now|
 | author |  ForeignKey    | User, on_delete=models.CASCADE, related_name='blog_posts'|
-| content |  TextField    |  null=False, blank=False, default=''|
+| content |  TextField    |  
 | image_url |  URLField    |  max_length=1024, null=True, blank=True|
 | status |  CharField    |  max_length=10,  choices=options, default='draft'|
 
