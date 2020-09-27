@@ -54,7 +54,6 @@ header {
 }
 
 .nav-link:hover {
-  color: #66015e!important;
   transform: scale(1.1);
 }
 
@@ -96,7 +95,7 @@ header {
     margin-top: 2rem;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: green;
 }
 
