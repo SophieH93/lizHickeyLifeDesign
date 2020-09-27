@@ -2,104 +2,89 @@
 {% load static %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
+<div id="course_detail_page" class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="image-container">
-                <a href="{{ course.image.url }}" target="_blank">
-                    <img class="blog-image img-fluid" src="{{ course.image.url}}" alt="{{ course.name }}">
-                </a>                  
+                <a href="{{ course.image_url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ course.image_url}}" alt="{{ course.name }}">
+                </a>                               
             </div>
         </div>
-        <div class="col-md-6 ">
-            <div class="product-details-container mb-5 mt-md-5">
-                <h1 class="mb-0">{{ course.name }}</h1>
-                <h3 class="">Description: </h3>
-                <p> {{ course.description }}</p>
-                {% if course.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ course.rating }} / 5</small>
-                {% else %}
-                    <small class="text-muted">No Rating</small>
-                {% endif %}
+        <div class="col-md-6">
+            <h2>{{ course.name }}</h2>
+            <h3 class="course-description-heading">Description: </h3>
+            <p class="course-description"> {{ course.description }}</p>  
+            <form id="course_form" method="POST" action="{% url 'add_to_cart' course.id %}">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <h4>Quantity:</h4>
+                        <div class="form-group w-50">
+                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Price:</h4>
+                            <h5><strong>€{{ course.price }}</strong></h5>
+                    </div>
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_course' course.id %}">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
+                    </small>
+                    {% endif %}
+                    <div class="col-12 buttons">
+                        <a href="{% url 'courses' %}" class="btn btn-light ">Courses                         
+                        </a>
+                        <input type="submit" class="btn btn-light " value="Add to Cart">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </div>                                       
+            </form>
+        </div>
+    </div>
+        
 
-                <form id="form" method="POST" action="{% url 'add_to_cart' course.id %}">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
-                            <div class="form-group w-50">
-                                <!-- <div class="input-group"> -->
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
-                                <!-- </div> -->
+ <section id="user-reviews" class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 all-reviews ">
+                    {% for review in reviews %}
+                        <div class="single-review">
+                            <div class="review-heading">
+                                <span class="text-muted"><i class="fas fa-user"></i> {{ review.user.username }}</span>
+                                <div class="review-rating ">
+                                    <i class="fas fa-star{% if review.rate < 1 %}-o empty{% endif %}"></i>
+                                    <i class="fas fa-star{% if review.rate < 2 %}-o empty{% endif %}"></i>
+                                    <i class="fas fa-star{% if review.rate < 3 %}-o empty{% endif %}"></i>
+                                    <i class="fas fa-star{% if review.rate < 4 %}-o empty{% endif %}"></i>
+                                    <i class="fas fa-star{% if review.rate < 5 %}-o empty{% endif %}"></i>
+                                </div>
+                                <div ><p><strong>{{ review.course }}</strong></p></div>
+                            </div>
+                            <div class="review-body">
+                                {{ review.review }}
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <p class="mt-3"><strong>Price:</strong></p>
-                                <p>€{{ course.price }}</p>
-                        </div>
-                        {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_course' course.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
-                        </small>
-                        {% endif %}
-                        <div class="col-12">
-                            <a href="{% url 'courses' %}" class="btn ">Courses                         
-                            </a>
-                            <input type="submit" class="btn" value="Add to Cart">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>                                       
+                    {% endfor %}
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 ">
+                <h2>Write a review</h2>
+                <form action="{% url 'add_review' course.id %}" method="POST" class="form-group review-form">
+                    {% csrf_token %}
+                    {{ review_form|crispy }}
+                    {% if user.is_authenticated %}
+                        <button id="submit-button" class="btn ">
+                            <span>Add Review</span>
+                        </button>
+                    {% else %}
+                        <p>You must be logged in to add reviews! <a href="{% url 'account_login' %}">Login</a>
+                         or <a href="{% url 'account_signup' %}">Register</a></p>
+                    {% endif %}
                 </form>
             </div>
         </div>
-        
-        <!-- Reviews and form review -->
-        <section class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>Review</h1>
-                </div>
-            </div>
-                <div class="col-12 col-md-6">
-                    {% for review in reviews %}
-                        <div class="single-review mb-3">
-                        <div class="review-heading">
-                            <span class="mr-3 text-muted"><i class="fas fa-user"></i> {{ review.user.username }}</span>
-                            <div class="review-rating float-right">
-                                <i class="fas fa-star{% if review.rate < 1 %}-o empty{% endif %}"></i>
-                                <i class="fas fa-star{% if review.rate < 2 %}-o empty{% endif %}"></i>
-                                <i class="fas fa-star{% if review.rate < 3 %}-o empty{% endif %}"></i>
-                                <i class="fas fa-star{% if review.rate < 4 %}-o empty{% endif %}"></i>
-                                <i class="fas fa-star{% if review.rate < 5 %}-o empty{% endif %}"></i>
-                            </div>
-                            <div class="mt-2"><p><strong>{{ review.course }}</strong></p></div>
-                        </div>
-                        <div class="review-body">
-                            {{ review.review }}
-                        </div>
-                    </div>
-                    <hr>
-                    {% endfor %}
-                    <div class="col-12 col-md-6">
-                        <h4>Write a review</h4>
-                        <form action="{% url 'add_review' course.id %}" method="POST" class="form-group review-form">
-                            {% csrf_token %}
-                            {{ review_form|crispy }}                          
-                            {% if user.is_authenticated %}
-                            <button id="submit-button" class="btn btn-lg btn-purple">
-                                <span class="text-uppercase">Add review</span>
-                            </button>
-                        {% else %}
-                            <p>You must be logged in to add reviews<a href="{% url 'account_login' %}">Login</a>
-                             or <a href="{% url 'account_signup' %}">Register</a></p>
-                        {% endif %}
-                    </form>
-                    </div>
-            </div>
-        </section> 
-
-    </div>
+    </section>
 </div>
+    
 {% endblock %}
