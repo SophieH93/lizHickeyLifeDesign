@@ -156,6 +156,10 @@ The images chosen for the website were taking from [Unsplash](https://unsplash.c
 # Skeleton:
 ## Wireframes
 
+* [Desktop](https://github.com/SophieH93/lizHickeyLifeDesign/tree/master/wireframes/desktop)
+* [Mobile](https://github.com/SophieH93/lizHickeyLifeDesign/tree/master/wireframes/mobile)
+* Tablet
+
 # Information Architecture:
 ## Database choice
 During the development phase I worked with **[sqlite3](https://docs.djangoproject.com/en/3.1/ref/databases/#sqlite-notes)** database which is installed with Django.
