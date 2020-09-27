@@ -43,14 +43,34 @@ header {
 
 /* Landing Page */
 
-.banner1 {
-    padding: 2rem;
+.banner {
+    padding: 1rem;
     color: #66015e;
-    text-align: center;
-    font-weight: 500;
+    text-align: center;   
 }
 
+.banner > h3 {
+    font-size: 2.5rem;
+}
 
+.home_about{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #026B23;
+}
+
+.liz-home-image {
+    border: 3px solid #66015e;
+    height: 60vh;
+    margin-bottom: 1rem;
+}
+
+.image-text {
+    color: #66015e;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 
 .banner2  {
     padding: 2rem;
@@ -59,29 +79,28 @@ header {
     text-align: center;
 }
 
-.banner2 > h2 {
-    font-size: 3rem;
-
+.banner2 > h3 {
+    font-size: 2rem;
 }
 
 .banner3  {
     padding: 2rem;
     color: #14660c;
     text-align: center;
-     font-size: 6rem;
 }
 
-.banner3 > h2 > a {
-    color: #10540a;
+.banner3 > h3 {
+    font-size: 2rem;
 }
 
+.banner3 > .btn {
+    background-color: #14660c;
+    transition: all .15s ease-in-out;
+}
 
-.about{
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: green;
+.banner3 > .btn:hover {
+    color: #FFFEFF;
+      transform: scale(1.1);
 }
 
 .info {
@@ -90,16 +109,8 @@ header {
     text-align: center;
 }
 
-.liz-home {
-    border: 3px solid #66015e;
-    height: 60vh;
-    margin-bottom: 1rem;
-}
 
-.purple {
-    color: #66015e;
-    font-size: 1.2rem;
-}
+
 
 .call-to-action  {
     padding: 3rem;
