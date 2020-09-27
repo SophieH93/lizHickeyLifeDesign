@@ -89,10 +89,41 @@ The users have the option to book a session with Liz directly, purchase a Course
 
 
 # Scope:
+The website is easy to navigate through and contains simple animation for added effect w
 
 # Structure:
 
-* Navbar
+* **Header:** 
+The header contains the logo, brand name and some brand text and the navigation links. 
+If the user is **logged in** to the website they will be able to purchase a course and leave a review.   
+For a **superuser**, when they log in there will be a product management navigation link where they can upload a new course. They will also be able to edit and delete a course if required.
+
+* **Home Page:**
+The home page consists of scroll animation, information about the brand and a Instagram widget.
+
+* **Login Page:**
+Contains a **form** for the user to enter their **Username & Password** allowing them to log into their account, providing their details are corrent.   
+If the details match the ones in the database, the user is redirected to the home pages and informed with a message that they have successfully logged in.
+
+* **Register Page:**
+Contains a form where the user enters a Username, Password and Confirm Password field. The Passwords must match and are hashed for security purposes.
+
+* **About Page:** Contains background about Liz and her experience.
+
+* **Courses Page:**  Contains the current courses offered by Liz that is stored in a database.
+
+* **Course Page:** Contains information about the selected course, the **price** of the course, **quantity** option and two **buttons** - courses and add to cart.
+The page also consists of a **review form** where logged in user can leave a review and will be stored in the database.
+
+* **Testimonials Page:** Contains testimonials provided by Liz's clients and a **google map api** to show Liz's clients/followers around the world.
+
+* **Book Page:** Contains information about a **book** Liz **co-authored** with a group of international women. and a link to Amazon to purchase the book.
+
+* **Blog:** Contains a few blogs written by Liz that are stored in a database.
+
+* **Contact:** Contains a contact form for a user to email Liz about an enquiry.
+
+
 
 # Surface:
 ## Design Choice
