@@ -270,7 +270,7 @@ h2 {
 }
 
 .liz-image {
-    border: 3px solid #10540a;
+    border: 6px solid #10540a;
     width: 50vh;
     margin-top: 4rem;
     float: right;
@@ -278,6 +278,7 @@ h2 {
 
 .about_text {
     font-size: 1.2rem;
+    color: green;
 }
 
 
