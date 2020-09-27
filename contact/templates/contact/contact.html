@@ -2,33 +2,24 @@
 
 {% load static %}
 {% block content %}
-
-<div class="row">
-    <div class="col-12 text-center">
-        <h1 class="uppercase main-heading">Please Get in touch</h1>      
-        <h3>We welcome enquiries please feel free to contact us by phone, email or on social media.</h3>  
+<div class="container animate__animated animate__fadeIn animate__slower">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="main-heading">Please Get in touch</h2>      
+            <h3>We welcome enquiries please feel free to contact us by phone, email or on social media.</h3>  
+        </div>
+    </div>
+    <div class="col-12 ">
+        <form action="{% url 'contact' %}" method="POST" class="form-group contact-form">
+            {% csrf_token %}
+            {{ contact_form|crispy }}
+            <button id="submit-button" class="btn ">
+                <span>Send message</span>
+                <span class="icon">
+                    <i class="far fa-envelope"></i>
+                </span>
+            </button>
+        </form>
     </div>
 </div>
-
-<!--Contact form-->
-        <div class="col-12 col-md-6 form-bg p-3">
-            <form action="{% url 'contact' %}" method="POST" class="form-group">
-                {% csrf_token %}
-                {{ contact_form|crispy }}
-                <button id="submit-button" class="btn btn-lg">
-                    <span class="text-uppercase">Send message</span>
-                    <span class="icon">
-                        <i class="far fa-envelope"></i>
-                    </span>
-                </button>
-            </form>
-        </div>
-       
-      
-
-
-
-  
-
-
-     {% endblock %}
+{% endblock %}
