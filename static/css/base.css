@@ -225,6 +225,7 @@ h2 {
 }
 
 
+
 .summitbookimg {
     /* height: 100%; */
     width: 55vh;
@@ -232,9 +233,28 @@ h2 {
     border: 3px solid #66015e;
 }
 
+/*Blog*/
 
+#blog {
+    margin-bottom: 2rem;
+}
 
+.blog-title {
+    margin-top: 2rem;
+}
 
+.blog-title > h3 {
+    font-size: 2rem;
+    color: #66015e;
+}
+
+.publish-time {
+    text-align: center;
+}
+
+.blog-content {
+    font-size: 1.3rem;
+}
 
 
 
