@@ -128,20 +128,19 @@ h2 {
 /* Course Page*/
 
 #courses {
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .card {
-    height: 55vh;
     margin-top: 3rem;
     border: 1px solid #10540a;
+    height: 100%;
 }
 
  .card-header {
     border: 1px solid #10540a;
     font-weight: 500;
     font-size: 1.2rem;
-
  }
 
 .card-text {
@@ -167,8 +166,8 @@ h2 {
 }
 
 .course-description {
-    font-size: 1.3rem;
-    margin-top: 1rem;   
+    font-size: 1.5rem;
+    margin-top: 1rem;  
 }
 
 #course_form  {
@@ -190,7 +189,6 @@ h2 {
 #user-reviews {
     margin-top: 4rem;
     margin-bottom: 3rem;
-
 }    
 
 .single-review {
@@ -206,13 +204,33 @@ h2 {
 }
 
 .fa-user {
-    color: #66015e;
+    color: #66015e; 
 }
 
 .review-form {
     width: 100%;
 }
 
+
+/*Liz's Book Page*/
+
+.book_description  {
+    font-size: 1.4rem;
+    margin-top: 3rem;
+}
+
+.author_liz {
+    padding-bottom: 2rem;
+    color: #14660c;
+}
+
+
+.summitbookimg {
+    /* height: 100%; */
+    width: 55vh;
+    margin-top: 6rem;
+    border: 3px solid #66015e;
+}
 
 
 
@@ -244,25 +262,6 @@ border: 1px solid blue;
 
 
 
-
-/*Liz's Book Page*/
-
-.book_description  {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-}
-
-.author_liz {
-    padding-bottom: 3rem;
-}
-
-
-.summitbookimg {
-    /* height: 100%; */
-    width: 50vh;
-    border: 3px solid #66015e;
-
-}
 
 
 
