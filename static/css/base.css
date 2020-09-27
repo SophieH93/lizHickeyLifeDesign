@@ -107,9 +107,14 @@ header {
 }
 
 .liz-home {
-    border: 4px solid #0f8105;
-    height: 50vh;
+    border: 3px solid #66015e;
+    height: 60vh;
     margin-bottom: 1rem;
+}
+
+.purple {
+    color: #66015e;
+    font-size: 1.2rem;
 }
 
 .call-to-action  {
