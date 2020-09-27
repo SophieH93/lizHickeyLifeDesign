@@ -211,6 +211,28 @@ h2 {
     width: 100%;
 }
 
+/*Testimonials*/
+
+#testimonials {
+    font-size: 1.2rem;
+}
+
+.quote-banner {
+    background-color: #66015e;
+    color: #FFFEFF; 
+    margin-top: 2rem;      
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.quote-banner2 {
+    color: #66015e;
+    margin-top: 2rem;   
+    font-weight: 500;
+}
+
+
+
 
 /*Liz's Book Page*/
 
