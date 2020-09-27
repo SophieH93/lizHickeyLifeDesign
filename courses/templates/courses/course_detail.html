@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div id="course_detail_page" class="container">
+<div id="course_detail_page" class="container  animate__animated animate__fadeIn animate__slower">
     <div class="row">
         <div class="col-md-6">
             <div class="image-container">
@@ -44,9 +44,9 @@
             </form>
         </div>
     </div>
-        
+</div>
 
- <section id="user-reviews" class="container-fluid">
+ <section id="user-reviews" class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-6 all-reviews ">
                     {% for review in reviews %}
