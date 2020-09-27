@@ -1,56 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
-
-/* 
-body {
-    background-color: #f8fcf5;  
-}  */
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
 /* Header */
 
 header {
     background-color: #66015e;
-    color: white;
-   
+    color: #FFFEFF;   
+    padding-top: 1rem;
 }
 
 #logo {
     width: auto; 
-    margin-top: 3rem;
-   
 }
 
 .brand_name > h1 {
     font-family: 'Baskervville', serif;
     text-align: center;
-    margin-top: 3.2rem;
     font-size: 4rem;
     font-weight: 500;
 }
 
-.brand_words  {
+.brand_words > h2 {
+    font-family: 'Lato', sans-serif;
     text-align: right;
-    margin-top: 3rem;   
-    color: white; 
+    color: #FFFEFF; 
 }
 
 /* Navigation */
 
-
-.navbar {
-    margin-top: 1rem; 
-        color: white!important;    
-
-}
-
 .nav-link {
-    color: white!important;    
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    color: #FFFEFF!important;    
+    font-size: 1.2rem;
     font-weight: 500;
-    transition: all .15s ease-in-out;
     margin: 1rem;
+    transition: all .15s ease-in-out;
 }
 
 .nav-link:hover {
@@ -71,7 +55,7 @@ header {
 .banner2  {
     padding: 2rem;
     background-color:  #66015e;
-    color: white;
+    color: #FFFEFF;
     text-align: center;
 }
 
@@ -84,6 +68,7 @@ header {
     padding: 2rem;
     color: #14660c;
     text-align: center;
+     font-size: 6rem;
 }
 
 .banner3 > h2 > a {
@@ -182,7 +167,7 @@ header {
 
 .btn {
     background-color: #66015e;
-    color: white;
+    color: #FFFEFF;
     font-size: 1.3rem;
 }
 
@@ -392,7 +377,7 @@ select option[value=""]{
 
 footer {
     background-color: #66015e;
-    color: white;
+    color: #FFFEFF;
     padding-bottom: 1rem;
 
 }
@@ -410,7 +395,7 @@ footer {
   font-size: 1.5rem;
   padding: 0.3rem;
   margin-top: 1rem;
-  color: white;
+  color: #FFFEFF;
 }
 
 
