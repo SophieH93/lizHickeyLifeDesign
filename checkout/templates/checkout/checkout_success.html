@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
+<div class="container animate__animated animate__fadeIn animate__slower">
    <div class="row">
       <div class="col">
-         <h1>Thank You </h1>
-         <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+        <h2>Thank You </h2>
+        <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
       </div>
    </div>
    <div class="row">
       <div class="col-12 col-lg-7">
-         <div class="order-confirmation-wrapper p-2 border">
+         <div class="order-complete">
             <div class="row">
                <div class="col">
-                  <small class="text-muted">Order Info:</small>
+                  <small class="order-headings">Order Info:</small>
                </div>
             </div>
             <div class="row">
@@ -34,7 +34,7 @@
             </div>
             <div class="row">
                <div class="col">
-                  <small class="text-muted">Order Details:</small>
+                  <small class="order-headings">Order Details:</small>
                </div>
             </div>
             {% for item in order.lineitems.all %}
@@ -113,7 +113,7 @@
             </div>
             <div class="row">
                <div class="col">
-                  <small class="text-muted">Billing Info:</small>
+                  <small class="order-headings">Billing Info:</small>
                </div>
             </div>
             <div class="row">
@@ -124,27 +124,17 @@
                   <p class="mb-0">{{ order.order_total }}</p>
                </div>
             </div>
-            <div class="row">
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Grand Total:</p>
-               </div>
-               <div class="col-12 col-md-4 text-md-right">
-                  <p class="mb-0">{{ order.order_total }}</p>
-               </div>
-            </div>
+          <hr style="height:3px;;background-color:green">
          </div>
       </div>
    </div>
 </div>
-<div class="row">
+
+<div class="row checkout-success-btn" data-aos="fade-up" data-aos-duration="1000">
    <div class="col-12 col-lg-7 text-right">
-      <a href="{% url 'courses' %}" class="btn btn-black rounded-0 my-2">
-      <span class="icon mr-2">
-      <i class="fas fa-gifts"></i>
-      </span>
-      <span class="text-uppercase">Now check out the latest deals!</span>
+      <a href="{% url 'courses' %}" class="btn">    
+      <span>View more courses!</span>
       </a>
    </div>
-</div>
 </div>
 {% endblock %}
