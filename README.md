@@ -78,14 +78,31 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
 
 
 ## User Goals
-* Website to be easy to use and visually appealing.
+* Catch attention by looking interesting.
+* Easy to navigate through and understand what LIFEDESIGN is.
+* Easy to buy.
+* Option to book a free session and connect through social media to get to know the owner better.
+* Colours to attract a female audience/potential client.
 * The Website will ensure safe storage of user details.
 * Purchase courses/services shown on the website in a safe and secure way.
+
+## Owner Goals
+* Visually appealing with brand logo included.
+* Some animation to create interest.
+* Easy to navigate.
+* Easy to add new information as the business begins to grow.
+* Facility for users to interact with the website e.g leave a review.
+* Ability for users to book a free consultation.
+* Instagram feed included on the website to bring colour and interest.
+* Website to be easy to ready and understand.
+* Suitable for an international English speaking audience. 
 
 # Strategy:
 
 The goal of this website is to provide users with a background to the Service offered by Liz with a user-friendly design.
 The users have the option to book a session with Liz directly, purchase a Course available and contact Liz via a contact form or through Liz's Social Media Sites.
+
+Target Audience - Female audience between the age of 36-65.
 
 
 # Scope:
@@ -373,7 +390,7 @@ When verification link is clicked in the email, user is redirected to the confir
 ## Checkout:
 * **Plan-** I will need to create a **checkout form** and a secure **payment system**, a **confirmation email** of their order sent to the user and an **order summary**.
     
-* **Implementation-** I followed the material provide by Code Instutute. I used [Strip](https://stripe.com/en-ie)  as the payment processor.  I created the **Order** and **OrderItem models** in the checkout app and peformed the migrations to setup the tables in the database. Then I create the form and views required and set up **Stripe validation** in a js file.
+* **Implementation-** I followed the material provide by Code Instutute. I used [Stripe](https://stripe.com/en-ie)  as the payment processor.  I created the **Order** and **OrderItem models** in the checkout app and peformed the migrations to setup the tables in the database. Then I create the form and views required and set up **Stripe validation** in a js file.
 I also want to ensure that the user is redirected to the **login/register** page **before** they can proceed to **checkout**.
 
 
