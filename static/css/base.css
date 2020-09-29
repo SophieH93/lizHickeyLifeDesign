@@ -492,7 +492,10 @@ footer {
   color: #FFFEFF;
 }
 
-
+.checkout-success-btn {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
