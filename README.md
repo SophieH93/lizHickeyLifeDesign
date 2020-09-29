@@ -402,6 +402,13 @@ I also want to ensure that the user is redirected to the **login/register** page
 
 * **Result-** All tests passed.
 
+Lightout Testing
+
+Desktop:
+![](static/images/lighthouseDesktop.JPG)
+
+Mobile:
+![](static/images/emailConfirmation.JPG)
 
 
 # Bugs:
