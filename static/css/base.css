@@ -110,6 +110,7 @@ header {
 
 h2 {
     color: #14660c;
+    margin-top: 1rem;
 }
 
 .liz-image {
@@ -152,6 +153,7 @@ h2 {
     font-size: 1.3rem;
 }
 
+
 /* Single Course Page*/
 
 #course_detail_page {
@@ -187,8 +189,16 @@ h2 {
     background-color: #66015e;
     color: #FFFEFF;
     font-size: 1.3rem;
+    transition: all .15s ease-in-out;
+
 }
 
+.btn:hover {
+    background-color: #66015e;
+    color: #FFFEFF;
+  transform: scale(1.1);
+
+}
 
 #user-reviews {
     margin-top: 4rem;
@@ -207,7 +217,7 @@ h2 {
     color: rgb(231, 184, 81);
 }
 
-.fa-user {
+.fa-user, .fa-trash-alt {
     color: #66015e; 
 }
 
@@ -302,6 +312,33 @@ h2 {
     font-size: 1.3rem;
 }
 
+
+/* Shopping Cart */
+
+.cart {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+}
+
+.cart-text > h3 {
+    padding: 1rem;
+}
+
+.cart-text > a {
+    font-size: 1.3rem;
+      color: #000;
+} 
+
+.cart-text > a:hover {
+    color: #14660c;
+} 
+
+.chart-buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
 
 
 
@@ -546,8 +583,7 @@ footer {
     }
 
     .banner {
-        font-size: 1rem;;
-
+        font-size: 1rem;
     }
    
 
