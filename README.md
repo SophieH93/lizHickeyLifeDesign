@@ -4,24 +4,23 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
 
 # Table of Contents:
 * [UX](https://github.com/SophieH93/lizHickeyLifeDesign#ux)    
-    * Project Goals
-    * User Stories
-    * User Goals
+    * [Project Goals](https://github.com/SophieH93/lizHickeyLifeDesign#project-goals)
+    * [User Stories](https://github.com/SophieH93/lizHickeyLifeDesign#user-stories)
+    * [User Goals](https://github.com/SophieH93/lizHickeyLifeDesign#user-goals)
+    * [Owner Goals](https://github.com/SophieH93/lizHickeyLifeDesign#owner-goals)
 * [Strategy](https://github.com/SophieH93/lizHickeyLifeDesign#strategy)
 * [Scope](https://github.com/SophieH93/lizHickeyLifeDesign#scope)
 * [Structure](https://github.com/SophieH93/lizHickeyLifeDesign#structure)
 * [Surface](https://github.com/SophieH93/lizHickeyLifeDesign#surface)
-    * Design Choices
+    * [Design Choices](https://github.com/SophieH93/lizHickeyLifeDesign#design-choice)
         * Typography
         * Colours
         * Styling
         * Images
     * [Feautres](https://github.com/SophieH93/lizHickeyLifeDesign#features)
 * [Skeleton](https://github.com/SophieH93/lizHickeyLifeDesign#skeleton)
-    * Wireframes    
-        * Website Layout
-        * Flowchart
-* [Information Architecture](https://github.com/SophieH93/lizHickeyLifeDesign#information-architecture)
+    * [Wireframes](https://github.com/SophieH93/lizHickeyLifeDesign#wireframes)
+ * [Information Architecture](https://github.com/SophieH93/lizHickeyLifeDesign#information-architecture)
     * [Database Choice](https://github.com/SophieH93/lizHickeyLifeDesign#database-choice)
     * [Data Models](https://github.com/SophieH93/lizHickeyLifeDesign#data-models)
         * [Profile](https://github.com/SophieH93/lizHickeyLifeDesign#profile)
@@ -40,10 +39,8 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
 * [Testing](https://github.com/SophieH93/lizHickeyLifeDesign#testing)
     * [Navbar/Footer](https://github.com/SophieH93/lizHickeyLifeDesign#navbarfooter)
     * [Authentication Pages:](https://github.com/SophieH93/lizHickeyLifeDesign#authentication-pages)
-    * [Courses & Courses detail Page:
-](https://github.com/SophieH93/lizHickeyLifeDesign#courses--courses-detail-page)
-* [Shopping Cart Page:
-](https://github.com/SophieH93/lizHickeyLifeDesign#shopping-cart-page)
+    * [Courses & Courses detail Page:](https://github.com/SophieH93/lizHickeyLifeDesign#courses--courses-detail-page)
+* [Shopping Cart Page:](https://github.com/SophieH93/lizHickeyLifeDesign#shopping-cart-page)
 * [Checkout](https://github.com/SophieH93/lizHickeyLifeDesign#checkout)
 * [Bugs](https://github.com/SophieH93/lizHickeyLifeDesign#bugs)
 * [Deployment](https://github.com/SophieH93/lizHickeyLifeDesign#deployment)
@@ -162,7 +159,7 @@ The images chosen for the website were taking from [Unsplash](https://unsplash.c
 * [Animate.css](https://animate.style/)
 * [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview)
 * [Stripe](http://stripe.com/)
-* [Gmail](https://gmail.com/)
+* [Email](https://gmail.com/)
 * [Elfsight](https://apps.elfsight.com/)
 * [Postgres](https://www.postgresql.org/)
 
