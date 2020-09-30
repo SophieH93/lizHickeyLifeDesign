@@ -115,7 +115,6 @@ h2 {
 
 .liz-image {
     border: 6px solid #14660c;
-    width: 50vh;
     margin-top: 4rem;
     float: right;
 }
@@ -605,7 +604,28 @@ footer {
 
     .banner {
         font-size: 1rem;
-    }
-   
+    }  
 
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .nav-link {
+        font-size: 1rem;
+        margin: 0;
+    }   
+
+    .home_about{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+   
+}
+
+.banner > h3 {
+    font-size: 2rem;
+
+}
+    
+
+}
+
