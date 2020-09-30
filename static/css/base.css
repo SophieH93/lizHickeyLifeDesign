@@ -618,14 +618,17 @@ footer {
     .home_about{
     font-size: 1.2rem;
     margin-top: 1rem;
-   
-}
 
-.banner > h3 {
-    font-size: 2rem;
+    }
 
-}
-    
+    .liz-home-image {
+        height: 40vh;
+    }
+
+    .banner > h3 {
+        font-size: 2rem;
+
+    }    
 
 }
 
