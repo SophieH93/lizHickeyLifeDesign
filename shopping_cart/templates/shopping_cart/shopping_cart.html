@@ -20,7 +20,7 @@
          <h3>Quantity: {{ item.quantity}} </h3>
          <a  href="{% url 'remove_from_cart' item.course.id %}">Remove from cart <i class="fas fa-trash-alt"></i></a>
       {% endfor %}
-      <div class="col-12 chart-buttons">
+      <div class="col-12 cart-buttons">
          <a href="{% url 'courses' %}" class="btn ">                                
          Courses
          </a>
@@ -29,10 +29,12 @@
          </a>
       </div>
       {% else %}
-      <h3>Your cart is empty!</h3>
-      <a href="{% url 'courses' %}">
-      <span>Keep Shopping</span>
-      </a>
+      <div class="col-12 empty-cart">
+            <h3>Your cart is empty!</h3>
+      </div>
+      <div class="col-12">
+            <a class="empty-cart-link" href="{% url 'courses' %}">View courses </a>
+      </div>
       {% endif %}
    </div>
 </div>
