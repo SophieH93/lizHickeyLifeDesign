@@ -13,10 +13,7 @@ LIFEDESIGN was created by Liz which is a process that helps people to overcome d
 * [Structure](https://github.com/SophieH93/lizHickeyLifeDesign#structure)
 * [Surface](https://github.com/SophieH93/lizHickeyLifeDesign#surface)
     * [Design Choices](https://github.com/SophieH93/lizHickeyLifeDesign#design-choice)
-        * Typography
-        * Colours
-        * Styling
-        * Images
+       
     * [Feautres](https://github.com/SophieH93/lizHickeyLifeDesign#features)
 * [Skeleton](https://github.com/SophieH93/lizHickeyLifeDesign#skeleton)
     * [Wireframes](https://github.com/SophieH93/lizHickeyLifeDesign#wireframes)
@@ -103,7 +100,7 @@ Target Audience - Female audience between the age of 36-65.
 
 
 # Scope:
-The website is easy to navigate through and contains simple animation for added effect w
+The website is easy to navigate through and contains simple animation for added effect.
 
 # Structure:
 
@@ -172,7 +169,7 @@ The images chosen for the website were taking from [Unsplash](https://unsplash.c
 
 * [Desktop](https://github.com/SophieH93/lizHickeyLifeDesign/tree/master/wireframes/desktop)
 * [Mobile](https://github.com/SophieH93/lizHickeyLifeDesign/tree/master/wireframes/mobile)
-* Tablet
+* [Tablet](https://github.com/SophieH93/lizHickeyLifeDesign/tree/master/wireframes/tablet)
 
 # Information Architecture:
 ## Database choice
@@ -324,11 +321,11 @@ A row of Order Item Detail is created for each item existing in the shopping bag
 ## Navbar/Footer:
 * **Plan-**  I will need to ensure all the links work properly so when the user clicks on one they are brought to the correct page. To ensure the navbar will collapse and the side bar shows up when the hamburger menu is clicked.
 
-* **Implementation-** 
+* **Implementation-** Check that the nav links go to the correct page and the social media links open in a new tab to the correct website.
 
-* **Testing-** 
+* **Testing-** Use **target="_blank"** to open the social media links in a new tab.
 
-* **Result-** 
+* **Result-**  Social media links open in a new tab to the correct url. When a superuser logs into the account a product management linkis displayed.
 
 
 
@@ -402,7 +399,7 @@ I also want to ensure that the user is redirected to the **login/register** page
 
 * **Result-** All tests passed.
 
-Lightout Testing
+**Lightout Testing**
 
 Desktop:
 ![](static/images/lighthouseDesktop.JPG)
@@ -420,6 +417,8 @@ Mobile:
 
 * **The Bug:** I experienced a bug with the **Review** moduel where it displayed a **400 bad request error** which lead to a **'NotNullViolation' error** when I tried to leave a review.   
 **The Fix:** The bug was eventually fixed, with views file amended.
+
+* **The Bug:** When I set debug = False It causes an error 500 on Heroku
 
 
 # Deployment:
@@ -507,37 +506,40 @@ pip3 install -r requirements.txt
 
 
 ## **Deploy to Heroku:**
-1. **Create** a **requirements.txt** file using the command
-```
-pip3 freeze > requirements.txt
-```
 
-2. **Create** a **Procfile** . Procfile must start with a capital 'P'
+
+1. **Create** a **Procfile** . Procfile must start with a capital 'P'
 ```
 echo web: python app.py > Procfile
 ```
 
-3. Push these to your Git repository.
+2. Push these to your Git repository.
 
-4. Create a new app on Heroku, assign a unique name and set your region (I used Europe)
+3. Create a new app on Heroku, assign a unique name and set your region (I used Europe)
 
-5. To start the web process, put the following command into the terminal to scale dynos:
+4. To start the web process, put the following command into the terminal to scale dynos:
 ```
 heroku ps:scale web=1
 ```
 
-6. From the Heroku dashboard, **click Deploy -> Deployment method -> GitHub**
+5. From the Heroku dashboard, **click Deploy -> Deployment method -> GitHub**
 
-7. Connect to your Github repository by adding your **repo name** and clicking the search button.
+6. Connect to your Github repository by adding your **repo name** and clicking the search button.
 
-8. In the heroku dashboard for the application, click on **Settings -> Reveal Config Vars** and set the following config vars:
-    * DATABASE_URL: *your_database_url*
-    * SECRET_KEY: *your secret key* 
-    *
+7. In the heroku dashboard for the application, click on **Settings -> Reveal Config Vars** and set the following config vars:
+    * "DATABASE_URL: "yourDatabaseUrl"
+    * "SECRET_KEY": "yourSecretKey"
+    * "STRIPE_PUBLIC_KEY"= "YourStripePublicKey"
+    * "STRIPE_SECRET_KEY" = "YourStripeSecretKey"
+    * "STRIPE_WH_SECRET" = "YourStripeWHKey"
+    * "GOOGLE_MAP_KEY" = "YourGoogleMapKey"
+    * "DEVELOPMENT" = "True"
+    * "EMAIL_HOST_PASS" = "EmailHostPassword"
+    * "EMAIL_HOST_USER" = "Youremail"
 
-9. **Deploy -> Manual Deploy** select the master branch and click **deploy branch** button.
+8. **Deploy -> Manual Deploy** select the master branch and click **deploy branch** button.
 
-10. Click **Open App** to view the app.
+9. Click **Open App** to view the app.
 
 # Credits
 * To created the allauth social media login in i followed [Codev Youtube video](https://www.youtube.com/watch?v=-TUEM2NCuVE)
