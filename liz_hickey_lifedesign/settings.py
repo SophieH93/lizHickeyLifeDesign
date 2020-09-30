@@ -31,7 +31,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['lizhickeylifedesign.herokuapp.com', 'localhost']
 
@@ -139,10 +139,12 @@ LOGIN_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
+    print("Using Postgres")
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
+    print("Using SQLite")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
