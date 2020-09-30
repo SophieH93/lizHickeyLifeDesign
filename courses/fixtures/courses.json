@@ -29,7 +29,7 @@
     "model": "courses.course",
     "fields": {
         "name": "'Lifedesign as a Lifeskill' 12 week course",
-        "excerpt": "This is a 12 week course completly online.",
+        "excerpt": "This is a 12 week course completely online.",
         "description": "Each module comprises video and downloadable PDF information. The course is emailed to you each week and questions are welcome on our private Facebook group.",
         "price": 390,
         "image_url": "https://images.unsplash.com/photo-1573164574001-518958d9baa2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
