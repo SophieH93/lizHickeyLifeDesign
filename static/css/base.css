@@ -258,7 +258,7 @@ h2 {
     min-height: 400px;
     height: 40vh;
     width: 100%;   
-    border: 1px solid blue;
+    border: 1px solid rgb(22, 22, 206);
 }
 
 .btn-facebook {
@@ -327,53 +327,48 @@ h2 {
 
 .cart-text > a {
     font-size: 1.3rem;
-      color: #000;
+    color: #000;
 } 
 
 .cart-text > a:hover {
     color: #14660c;
 } 
 
-.chart-buttons {
+.cart-buttons {
     text-align: center;
     margin-top: 2rem;
 }
 
-
-
-
-
-
-
-.contact-form {
- margin-top: 3rem;
+.empty-cart > h3 {
+    font-size: 4rem;
+    color: #66015e;
+    padding-bottom: 4rem;
  }
 
+.empty-cart-link {
+    font-size: 3rem;
+    color: #14660c;
+}
 
+.contact-form  {
+    margin-top: 3rem;
+ }
 
 .blog-title {
    text-align: center;
 }
 
-/* .review-user {
-    vertical-align: middle;
-    width: 6.25rem;
-    height: 6.25rem;
-} */
 
 .blog-image {
     height: 40vh;
-    width: 55vh;
-           
+    width: 55vh;           
 }
 
 /*Toasts - messages*/
 .container-messages {
-position: fixed;
-top: 6rem;
-right: 0.1rem;
-/* z-index: 99999; */
-/* background-color: #074712; */
+    position: fixed;
+    top: 6rem;
+    right: 0.1rem;
 }
 
 .toast-success{
@@ -395,9 +390,6 @@ border: 0.2rem solid rgb(4, 29, 4);
     color: #14660c;
     font-weight: 500;
 }
-
-
-
 
 
 /*Stripe*/
@@ -494,6 +486,7 @@ footer {
 .checkout-success-btn {
     margin-bottom: 3rem;
     margin-top: 3rem;
+
 }
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -616,17 +609,16 @@ footer {
     }   
 
     .brand_name > h1 {
-    font-size: 3rem;
-}
+        font-size: 3rem;
+    }
 
     .brand_words > h2 {
         font-size: 1rem;
     }
 
     .home_about{
-    font-size: 1.2rem;
-    margin-top: 1rem;
-
+        font-size: 1.2rem;
+        margin-top: 1rem;
     }
 
     .liz-home-image {
@@ -635,7 +627,6 @@ footer {
 
     .banner > h3 {
         font-size: 2rem;
-
     }    
 
 }
