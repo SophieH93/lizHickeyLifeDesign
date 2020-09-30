@@ -1,6 +1,9 @@
-# LIZ HICKEY LIFEDIGN
+# LIZ HICKEY LIFESDIGN
+![](static/images/mockup.JPG)
 
-LIFEDESIGN was created by Liz which is a process that helps people to overcome different life challenges. It will give you tools to be able to move forward from all kind of experiences and to find creative and innovative solutions to your problems.
+**LIFEDESIGN** was created by Liz which is a process that helps people to overcome different life challenges. It will give you tools to be able to move forward from all kind of experiences and to find creative and innovative solutions to your problems.
+
+This website was create for Liz. Together we came up with a design that was able to fulfil Liz's vision. All information on this website was provided by Liz.
 
 # Table of Contents:
 * [UX](https://github.com/SophieH93/lizHickeyLifeDesign#ux)    
@@ -163,6 +166,8 @@ The images chosen for the website were taking from [Unsplash](https://unsplash.c
 
 
 ## Future Features
+* A a blog form in the Product Management so the Owner can upload a new blog.
+* 
 
 # Skeleton:
 ## Wireframes
