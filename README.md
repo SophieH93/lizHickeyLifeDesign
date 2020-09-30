@@ -418,7 +418,9 @@ Mobile:
 * **The Bug:** I experienced a bug with the **Review** moduel where it displayed a **400 bad request error** which lead to a **'NotNullViolation' error** when I tried to leave a review.   
 **The Fix:** The bug was eventually fixed, with views file amended.
 
-* **The Bug:** When I set debug = False It causes an error 500 on Heroku
+* **The Bug:** When I set **debug = False** it causes an error 500 on Heroku.   
+**The Bug:** As this issue only arose the day of submission we were unable to solve this. The tutors unfortunately could not solve this issue. It
+seems to be some issue with whitenoise. Hence I have left debgu to True in my settings.
 
 
 # Deployment:
