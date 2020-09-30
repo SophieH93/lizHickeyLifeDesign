@@ -1,4 +1,4 @@
-# LIZ HICKEY LIFESDIGN
+# LIZ HICKEY LIFEDESIGN
 ![](static/images/mockup.JPG)
 
 **LIFEDESIGN** was created by Liz which is a process that helps people to overcome different life challenges. It will give you tools to be able to move forward from all kind of experiences and to find creative and innovative solutions to your problems.
